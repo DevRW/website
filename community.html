@@ -1,642 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Join Community - DevRW | Rwanda's Developer Community</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0E0C" />
+  <meta name="color-scheme" content="dark" />
+  <title>Community — DevRW</title>
+  <meta name="description" content="Join the DevRW community. WhatsApp community, AI study circle, meetups in Kigali, code reviews on real production projects." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <div id="main-wrapper">
-      <!-- Header -->
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="index.html">
-                    <h2 class="text-primary">DevRW</h2>
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="community.html">Community</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="jobs.html">Jobs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="signin-btn">
-                    <a class="btn btn-primary" href="contact.html" style="font-weight: 600; padding: 10px 24px">
-                      <i class="fa fa-users mr-2"></i>Hire Developers
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand"><span class="dot"></span>dev<span class="tld">.rw</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link is-active" href="community.html">Community</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="jobs.html">Jobs</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <button class="btn btn--primary btn--sm" data-modal-open="requestCVModal">
+          Hire developers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="nav__toggle" data-nav-toggle aria-expanded="false">Menu</button>
       </div>
+    </div>
+    <div class="nav__drawer" data-nav-drawer>
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link is-active" href="community.html">Community</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="jobs.html">Jobs</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-      <!-- Community Benefits -->
-      <div class="portfolio section-padding" style="background-color: #2d3436">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>DevRW Community Benefits</h2>
-                <p>
-                  >What You Get Being part of DevRW means access to opportunities, knowledge,
-                  and a supportive community
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-users"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Collaborate & Learn</h4>
-                  <p>
-                    Work on open source projects with experienced developers.
-                    Learn new technologies, best practices, and contribute to
-                    real-world applications.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-briefcase"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Job Opportunities</h4>
-                  <p>
-                    Get matched with hiring companies, access exclusive job
-                    postings, and receive notifications about opportunities that
-                    match your skills.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-calendar"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Events & Meetups</h4>
-                  <p>
-                    Attend workshops, hackathons, and tech talks. Network with
-                    fellow developers and learn from industry experts in Kigali
-                    and online.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-code"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Open Source Projects</h4>
-                  <p>
-                    Contribute to community-driven open source tools like the
-                    Rwanda Locations Library used by thousands of developers
-                    across Africa.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-graduation-cap"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Mentorship</h4>
-                  <p>
-                    Get guidance from senior developers, share your knowledge
-                    with others, and grow together in a supportive learning
-                    environment.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-comments"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Active Community</h4>
-                  <p>
-                    Join our Slack workspace with 500+ developers. Get help,
-                    share your work, discuss tech trends, and stay connected
-                    with the ecosystem.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Join Form Section -->
-      <div class="trade-app section-padding" id="joinForm">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-8 col-lg-10">
-              <div class="section-title text-center">
-                <h2>Join the Community</h2>
-                <p style="font-size: 1.1rem">
-                  Fill out this simple form to become part of Rwanda's most
-                  active developer community. It's completely free!
-                </p>
-              </div>
-
-              <div
-                class="card trade-app-content"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(16, 208, 120, 0.05) 0%,
-                    rgba(16, 208, 120, 0.02) 100%
-                  );
-                  border: 2px solid var(--primary);
-                "
-              >
-                <div class="card-body" style="padding: 3rem">
-                  <form
-                    action="https://formspree.io/f/YOUR_FORM_ID"
-                    method="POST"
-                    id="joinForm"
-                  >
-                    <!-- Field 1: Full Name -->
-                    <div class="mb-4">
-                      <label
-                        style="
-                          font-weight: 600;
-                          margin-bottom: 0.75rem;
-                          font-size: 1.1rem;
-                        "
-                      >
-                        <i class="fa fa-user text-primary mr-2"></i>Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control form-control-lg"
-                        name="name"
-                        placeholder="Enter your full name"
-                        required
-                        style="
-                          background-color: #394247;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                          padding: 15px;
-                        "
-                      />
-                    </div>
-
-                    <!-- Field 2: Email -->
-                    <div class="mb-4">
-                      <label
-                        style="
-                          font-weight: 600;
-                          margin-bottom: 0.75rem;
-                          font-size: 1.1rem;
-                        "
-                      >
-                        <i class="fa fa-envelope text-primary mr-2"></i>Email
-                        Address *
-                      </label>
-                      <input
-                        type="email"
-                        class="form-control form-control-lg"
-                        name="email"
-                        placeholder="your.email@example.com"
-                        required
-                        style="
-                          background-color: #394247;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                          padding: 15px;
-                        "
-                      />
-                    </div>
-
-                    <!-- Field 3: Experience Level -->
-                    <div class="mb-4">
-                      <label
-                        style="
-                          font-weight: 600;
-                          margin-bottom: 0.75rem;
-                          font-size: 1.1rem;
-                        "
-                      >
-                        <i class="fa fa-bar-chart text-primary mr-2"></i
-                        >Experience Level *
-                      </label>
-                      <select
-                        class="form-control form-control-lg"
-                        name="experience"
-                        required
-                        style="
-                          background-color: #394247;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                          padding: 15px;
-                        "
-                      >
-                        <option value="">Select your experience level</option>
-                        <option value="beginner">
-                          Beginner (Learning to code)
-                        </option>
-                        <option value="junior">Junior (0-2 years)</option>
-                        <option value="mid">Mid-level (2-5 years)</option>
-                        <option value="senior">Senior (5+ years)</option>
-                        <option value="lead">Lead/Architect (7+ years)</option>
-                      </select>
-                    </div>
-
-                    <!-- Field 4: Primary Skills -->
-                    <div class="mb-4">
-                      <label
-                        style="
-                          font-weight: 600;
-                          margin-bottom: 0.75rem;
-                          font-size: 1.1rem;
-                        "
-                      >
-                        <i class="fa fa-code text-primary mr-2"></i>Primary
-                        Skills/Technologies *
-                      </label>
-                      <input
-                        type="text"
-                        class="form-control form-control-lg"
-                        name="skills"
-                        placeholder="e.g., JavaScript, React, Python, Node.js"
-                        required
-                        style="
-                          background-color: #394247;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                          padding: 15px;
-                        "
-                      />
-                      <small
-                        style="
-                          color: rgba(255, 255, 255, 0.6);
-                          display: block;
-                          margin-top: 0.5rem;
-                        "
-                      >
-                        Separate multiple skills with commas
-                      </small>
-                    </div>
-
-                    <!-- Field 5: What interests you -->
-                    <div class="mb-4">
-                      <label
-                        style="
-                          font-weight: 600;
-                          margin-bottom: 0.75rem;
-                          font-size: 1.1rem;
-                        "
-                      >
-                        <i class="fa fa-heart text-primary mr-2"></i>What
-                        interests you most? *
-                      </label>
-                      <textarea
-                        class="form-control form-control-lg"
-                        name="interests"
-                        rows="4"
-                        placeholder="Tell us what you're interested in: Learning new skills? Contributing to open source? Finding job opportunities? Networking with other developers?"
-                        required
-                        style="
-                          background-color: #394247;
-                          border: 2px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                          padding: 15px;
-                        "
-                      ></textarea>
-                      <small
-                        style="
-                          color: rgba(255, 255, 255, 0.6);
-                          display: block;
-                          margin-top: 0.5rem;
-                        "
-                      >
-                        This helps us provide you with relevant opportunities
-                        and content
-                      </small>
-                    </div>
-
-                    <!-- Consent -->
-                    <div class="mb-4 form-check">
-                      <input
-                        type="checkbox"
-                        class="form-check-input"
-                        id="consent"
-                        name="consent"
-                        required
-                      />
-                      <label
-                        class="form-check-label"
-                        for="consent"
-                        style="padding-left: 0.5rem"
-                      >
-                        I agree to join the DevRW community and receive updates
-                        about events, opportunities, and open source projects.
-                      </label>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <div class="text-center">
-                      <button
-                        type="submit"
-                        class="btn btn-primary btn-lg"
-                        style="
-                          padding: 15px 60px;
-                          font-size: 1.2rem;
-                          font-weight: 700;
-                        "
-                      >
-                        <i class="fa fa-check mr-2"></i>Join Community
-                      </button>
-                      <p class="mt-3" style="opacity: 0.8">
-                        After joining, you'll receive an invitation to our Slack
-                        workspace and weekly newsletter with opportunities and
-                        updates.
-                      </p>
-                    </div>
-
-                    <input
-                      type="hidden"
-                      name="_subject"
-                      value="New Community Member"
-                    />
-                  </form>
-                </div>
-              </div>
-
-              <!-- Additional Info -->
-              <div class="text-center mt-4">
-                <p style="opacity: 0.8">
-                  Have questions?
-                  <a
-                    href="contact.html"
-                    style="color: var(--primary); text-decoration: underline"
-                    >Contact us</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Community Voices -->
-      <div class="portfolio section-padding" style="background-color: #2d3436">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>What Community Members Say</h2>
-                <p>Hear from developers who are already part of DevRW</p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p style="font-style: italic; line-height: 1.7">
-                    "DevRW gave me my first opportunity to work on a production
-                    project. The community is incredibly supportive, and I've
-                    learned more in 6 months here than I did in 2 years alone."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h6 style="font-weight: 700">Junior Developer</h6>
-                    <small style="opacity: 0.7">Community Member</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p style="font-style: italic; line-height: 1.7">
-                    "The network and connections I've made through DevRW have
-                    been invaluable. I found my current job through the
-                    community and regularly collaborate on open source
-                    projects."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h6 style="font-weight: 700">Full Stack Developer</h6>
-                    <small style="opacity: 0.7">Community Member</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p style="font-style: italic; line-height: 1.7">
-                    "DevRW is more than just a community—it's a movement.
-                    Contributing to open source projects that benefit Rwanda and
-                    Africa makes my work feel meaningful."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h6 style="font-weight: 700">Senior Developer</h6>
-                    <small style="opacity: 0.7">Open Source Contributor</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2025 <a href="index.html">DevRW</a> | All Rights
-                  Reserved
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="https://twitter.com/devsInRW" target="_blank"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/company/dev-rw"
-                      target="_blank"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DevRW" target="_blank"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow page-head__index">community / join_in</span>
+        <h1 class="display-xl">There's a <span class="italic">chair</span> for you here.</h1>
+        <p class="lead">
+          DevRW is open to anyone shipping code in Rwanda — bootcamp graduates, self-taught engineers,
+          university students, ten-year veterans. We don't gate-keep. We do, however, expect you to be
+          kind, curious, and willing to share what you know.
+        </p>
+        <div class="flex flex-wrap gap-12 mt-40">
+          <a class="btn btn--primary btn--lg" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">
+            Join whatsapp
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button class="btn btn--ghost btn--lg" data-modal-open="joinCommunityModal">Add your profile</button>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <section class="section section--bg-2">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">01</span> <span class="slash">/</span> benefits</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">What you get when you <span class="italic">join.</span></h2>
+          <p class="body mt-24">No swag, no certificates. Access to the people, projects, and conversations that move you forward.</p>
+        </div>
+      </div>
 
-    <script>
-      // Form submission handling
-      document
-        .getElementById("joinForm")
-        .addEventListener("submit", function (e) {
-          setTimeout(function () {
-            alert(
-              "Welcome to DevRW! Check your email for next steps and Slack invitation."
-            );
-          }, 100);
-        });
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01.1</span>
+          <h3 class="card__title">Collaborate &amp; learn</h3>
+          <p class="card__body">Work alongside experienced developers on real production code. PRs reviewed. Mistakes welcome.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.2</span>
+          <h3 class="card__title">Job opportunities</h3>
+          <p class="card__body">When companies ask us for engineers, we route the role to the community first. No hidden middle-man cuts.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.3</span>
+          <h3 class="card__title">Events &amp; meetups</h3>
+          <p class="card__body">Hack nights, talks, and occasional workshops — mostly in Kigali, sometimes online. Loose, social, useful.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.4</span>
+          <h3 class="card__title">Open source projects</h3>
+          <p class="card__body">Contribute to the Rwanda Locations Library, AI tooling, and other community-led projects. Real commits, real review.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.5</span>
+          <span class="ai-badge">ai · study group</span>
+          <h3 class="card__title">AI study circle</h3>
+          <p class="card__body">A dedicated WhatsApp group for papers, prompts, open model evals, agent design clinics, and the AI side of building products in Africa.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.6</span>
+          <h3 class="card__title">Mentorship</h3>
+          <p class="card__body">Pair with someone further along. Ask the dumb question in #help. Share what you know in #share. A working WhatsApp — conversations, not announcements.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-      // Smooth scroll
-      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-        anchor.addEventListener("click", function (e) {
-          const target = this.getAttribute("href");
-          if (target !== "#" && document.querySelector(target)) {
-            e.preventDefault();
-            document.querySelector(target).scrollIntoView({
-              behavior: "smooth",
-            });
-          }
-        });
-      });
-    </script>
+  <section class="section section--bg" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02</span> <span class="slash">/</span> ai_work</span>
+        <div class="sec-head__intro">
+          <span class="ai-badge">community focus area</span>
+          <h2 class="display-l mt-24">The <span class="italic">AI</span> conversation in DevRW.</h2>
+          <p class="body mt-24">
+            AI shows up in nearly every WhatsApp message right now. Members are building, studying, and shipping
+            with it — and the community is structured to support that, not just talk about it.
+          </p>
+        </div>
+      </div>
 
-    <style>
-      .container {
-        max-width: 1200px;
-      }
-      .section-padding {
-        padding: 80px 0;
-      }
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 50px 0;
-        }
-        .intro {
-          padding: 80px 0 60px 0 !important;
-        }
-      }
-      .btn-outline-primary:hover {
-        background-color: var(--primary) !important;
-        color: #fff !important;
-        border-color: var(--primary) !important;
-      }
-      .btn-primary:hover {
-        background-color: #0eb968 !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(16, 208, 120, 0.3);
-      }
-      .form-control:focus {
-        border-color: var(--primary) !important;
-        box-shadow: 0 0 0 0.2rem rgba(16, 208, 120, 0.25) !important;
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </body>
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">02.1</span>
+          <h3 class="card__title">Weekly paper threads</h3>
+          <p class="card__body">A rotating member picks a paper, summarises it, and opens it for discussion. Light commitment, deep payoff.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02.2</span>
+          <h3 class="card__title">Model evaluations</h3>
+          <p class="card__body">We test open models on real African-context tasks — Kinyarwanda translation, USSD bot reasoning, OCR on handwritten registers. Results get shared back.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02.3</span>
+          <h3 class="card__title">Build-along sessions</h3>
+          <p class="card__body">Occasional hands-on sessions where members pair up to build something — a RAG system, an agent, a fine-tune — and ship a public write-up.</p>
+        </article>
+      </div>
+
+      <div class="mt-40">
+        <a class="btn btn--primary" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">
+          Join #ai on whatsapp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join form section: opens modal with Google Form -->
+  <section class="section section--bg-2" id="join">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">03</span> <span class="slash">/</span> get_on_the_list</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Drop your <span class="italic">details.</span></h2>
+          <p class="body mt-24">
+            We'll keep you in the loop about events, send you the WhatsApp invite, and — if it fits — route
+            opportunities your way. Your data stays with us. No spam.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-block cta-block--mint">
+        <div>
+          <h3>Become a member</h3>
+          <p class="body">Our intake form lives on Google Forms. It takes about a minute. We'll follow up by email.</p>
+        </div>
+        <div class="cta-block__actions">
+          <button class="btn btn--primary btn--lg" data-modal-open="joinCommunityModal">Open the form
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <a class="btn btn--ghost btn--lg" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">Or jump to whatsapp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">04</span> <span class="slash">/</span> voices</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">What members tend to <span class="italic">say.</span></h2>
+          <p class="body mt-24">Summarised themes from real WhatsApp messages — not staged marketing testimonials.</p>
+        </div>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="testimonial">
+          <p class="testimonial__quote">My first real PR review happened here. The comments were patient, specific, and they made me a better engineer.</p>
+          <div class="testimonial__attr"><strong>Recurring theme</strong> · #help in whatsapp</div>
+        </article>
+        <article class="testimonial">
+          <p class="testimonial__quote">It's where I find work that doesn't insult me. The gigs routed through DevRW tend to be transparent on rate, scope, and timeline.</p>
+          <div class="testimonial__attr"><strong>Recurring theme</strong> · #jobs in whatsapp</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span class="dot"></span>dev<span class="tld">.rw</span></div>
+          <p class="footer__tag">A community of Rwandan developers building open source tools for Africa. Based in Kigali, on the internet everywhere.</p>
+        </div>
+        <div class="footer__col"><h6>Site</h6>
+          <a href="index.html">Home</a><a href="community.html">Community</a><a href="projects.html">Projects</a>
+          <a href="about.html">About</a><a href="jobs.html">Jobs</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col"><h6>Open source</h6>
+          <a href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
+          <a href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">rwanda-location</a>
+          <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm package</a>
+          <a href="http://itegure.rw/" target="_blank" rel="noopener">Itegure</a>
+        </div>
+        <div class="footer__col"><h6>Connect</h6>
+          <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@dev.rw">hello@dev.rw</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 DevRW · MIT licensed where it can be.</span>
+        <span>Kigali, RW · UTC+2</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-overlay" id="joinCommunityModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Join the community</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">We'll add you to the directory, send the WhatsApp invite, and let you know about upcoming events. No spam.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSeSfUPJr7sRqjRDeEzBAPWjFj4bw7SlR9ZOpu8woPzTH52KTw/viewform?embedded=true" loading="lazy" title="Join the community form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="requestCVModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Request developer CVs</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Tell us about the role. We'll send matching profiles within a couple of working days.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true" loading="lazy" title="Request developer CVs form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="hireProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Start your project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">A short note on what you'd like to build. We'll come back with next steps within a working day.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true" loading="lazy" title="Start a project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="submitProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Submit your open source project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Share your project — library, tool, dataset, AI model. If it fits, we'll add it to the projects page.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScxgaZa7jaRb4QtfKVZnNo_J00A3W6Kfnax2rKXXqkA4cJo8w/viewform?embedded=true" loading="lazy" title="Submit open source project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
 </html>

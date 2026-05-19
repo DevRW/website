@@ -1,560 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Contact Us - DevRW | Hire Developers & Start Projects</title>
-    <meta name="description" content="Get in touch with DevRW. Hire developers or start your software project. Contact us via email, phone, or fill out our form." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0E0C" />
+  <meta name="color-scheme" content="dark" />
+  <title>Contact — DevRW</title>
+  <meta name="description" content="Get in touch with DevRW. Hire developers, start a project, or just say hi from Kigali." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand"><span class="dot"></span>dev<span class="tld">.rw</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="community.html">Community</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="jobs.html">Jobs</a>
+        <a class="nav__link is-active" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <button class="btn btn--primary btn--sm" data-modal-open="requestCVModal">
+          Hire developers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="nav__toggle" data-nav-toggle aria-expanded="false">Menu</button>
+      </div>
+    </div>
+    <div class="nav__drawer" data-nav-drawer>
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="community.html">Community</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="jobs.html">Jobs</a>
+      <a class="nav__link is-active" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-  <body>
-    <div id="main-wrapper">
-      <!-- Header -->
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="index.html">
-                    <h2 class="text-primary">DevRW</h2>
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="jobs.html">Jobs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="signin-btn">
-                    <a class="btn btn-primary" href="contact.html" style="font-weight: 600; padding: 10px 24px">
-                      <i class="fa fa-users mr-2"></i>Hire Developers
-                    </a>
-                  </div>
-                </nav>
-              </div>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow page-head__index">contact / say_hi</span>
+        <h1 class="display-xl">Talk to <span class="italic">us.</span></h1>
+        <p class="lead">
+          Hire developers, start a project, submit your open source work, or just ask a question.
+          A real person reads everything that comes in and replies — usually within a working day.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight section--bg-2">
+    <div class="wrap">
+      <div class="contact-grid">
+        <!-- LEFT: contact info -->
+        <aside class="contact-info">
+          <div class="contact-info__item">
+            <span class="label">email</span>
+            <span class="value"><a href="mailto:hello@dev.rw">hello@dev.rw</a></span>
+            <span class="mono text-mute">reply within 1 working day</span>
+          </div>
+          <div class="contact-info__item">
+            <span class="label">whatsapp</span>
+            <span class="value"><a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">Join the community group</a></span>
+            <span class="mono text-mute">fastest path to anyone in the community</span>
+          </div>
+          <div class="contact-info__item">
+            <span class="label">office</span>
+            <span class="value">Kigali, Rwanda</span>
+            <span class="mono text-mute">CAT (UTC+2) · mon–fri</span>
+          </div>
+          <div class="contact-info__item">
+            <span class="label">connect</span>
+            <div class="socials">
+              <a href="https://github.com/DevRW" target="_blank" rel="noopener" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.5-4-1.5-.5-1.4-1.3-1.8-1.3-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.3.5-2.4 1.3-3.2-.1-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+              </a>
+              <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener" aria-label="Twitter / X">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.3 1.9h3.6l-7.9 9 9.3 12.3h-7.3l-5.7-7.5-6.6 7.5H.1l8.5-9.7L0 1.9h7.5l5.2 6.8 5.6-6.8Zm-1.2 19.2h2L7.1 4H4.9l12.2 17.1Z"/></svg>
+              </a>
+              <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 2h-17A1.5 1.5 0 0 0 2 3.5v17A1.5 1.5 0 0 0 3.5 22h17a1.5 1.5 0 0 0 1.5-1.5v-17A1.5 1.5 0 0 0 20.5 2ZM8 19H5V9h3v10ZM6.5 7.7a1.7 1.7 0 1 1 0-3.4 1.7 1.7 0 0 1 0 3.4ZM19 19h-3v-5.4c0-1.4-.5-2.2-1.6-2.2-1.2 0-1.9.8-1.9 2.2V19h-3V9h2.9v1.4a3.3 3.3 0 0 1 3-1.6c2 0 3.6 1.2 3.6 3.8V19Z"/></svg>
+              </a>
+              <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
+              </a>
             </div>
           </div>
+        </aside>
+
+        <!-- RIGHT: mode switcher + Google Form embed -->
+        <div>
+          <div class="radio-cards">
+            <button type="button" class="radio-card" data-mode="hire">
+              <span class="radio-card__title">Hiring developers</span>
+              <span class="radio-card__desc">Send a role brief, get matching CVs.</span>
+            </button>
+            <button type="button" class="radio-card" data-mode="project">
+              <span class="radio-card__title">Starting a project</span>
+              <span class="radio-card__desc">Build with the community.</span>
+            </button>
+          </div>
+
+          <!-- HIRE-MODE iframe -->
+          <div class="hidden" data-mode-frame="hire">
+            <p class="mono text-mute mt-12 mb-24" data-mode-intro="hire">Form below is the developer-CV request form. Powered by Google Forms.</p>
+            <div style="background:var(--panel); border:1px solid var(--line); border-radius:var(--r);">
+              <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true" loading="lazy" title="Hire developers form">Loading…</iframe>
+            </div>
+          </div>
+
+          <!-- PROJECT-MODE iframe -->
+          <div class="hidden" data-mode-frame="project">
+            <p class="mono text-mute mt-12 mb-24" data-mode-intro="project">Form below is the start-a-project form. Powered by Google Forms.</p>
+            <div style="background:var(--panel); border:1px solid var(--line); border-radius:var(--r);">
+              <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true" loading="lazy" title="Start a project form">Loading…</iframe>
+            </div>
+          </div>
+
+          <!-- Default state: prompt user to choose mode -->
+          <div class="note mt-12" id="contactChooseHint">Choose an option above to load the right form.</div>
         </div>
       </div>
 
-      <!-- Contact Section -->
-      <div class="section-spacing page-header" style="padding-bottom: 5rem">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center mb-2xl">
-                <h1 class="page-title">Get In Touch</h1>
-                <p class="page-subtitle">
-                  Ready to hire developers or start your next project? We're here to help you succeed.
-                </p>
-              </div>
-
-              <div class="row">
-                <!-- Contact Information Sidebar -->
-                <div class="col-lg-4 mb-lg">
-                  <div class="card-custom" style="height: 100%">
-                    <div class="card-body-custom">
-                      <h4 class="font-bold mb-lg">Contact Information</h4>
-
-                      <!-- Email -->
-                      <div class="contact-info-item mb-lg">
-                        <div class="contact-icon-wrapper mb-sm">
-                          <i class="fa fa-envelope"></i>
-                        </div>
-                        <h6 class="font-semibold mb-xs">Email</h6>
-                        <a href="mailto:hello@dev.rw" class="text-primary">hello@dev.rw</a>
-                        <p class="text-xs text-muted-custom mt-xs mb-0">We'll respond within 24 hours</p>
-                      </div>
-
-                      <!-- Phone -->
-                      <div class="contact-info-item mb-lg">
-                        <div class="contact-icon-wrapper mb-sm">
-                          <i class="fa fa-phone"></i>
-                        </div>
-                        <h6 class="font-semibold mb-xs">Phone</h6>
-                        <a href="tel:+250788662441" class="text-primary">+250 788 662 441</a>
-                        <p class="text-xs text-muted-custom mt-xs mb-0">Mon-Fri, 9:00 AM - 6:00 PM (CAT)</p>
-                      </div>
-
-                      <!-- Location -->
-                      <div class="contact-info-item mb-lg">
-                        <div class="contact-icon-wrapper mb-sm">
-                          <i class="fa fa-map-marker"></i>
-                        </div>
-                        <h6 class="font-semibold mb-xs">Location</h6>
-                        <p class="mb-xs">Kigali, Rwanda</p>
-                        <p class="text-xs text-muted-custom mb-0">East Africa (CAT Timezone)</p>
-                      </div>
-
-                      <!-- Website -->
-                      <div class="contact-info-item mb-lg">
-                        <div class="contact-icon-wrapper mb-sm">
-                          <i class="fa fa-globe"></i>
-                        </div>
-                        <h6 class="font-semibold mb-xs">Website</h6>
-                        <a href="https://dev.rw" target="_blank" class="text-primary">dev.rw</a>
-                        <p class="text-xs text-muted-custom mt-xs mb-0">Visit our main website</p>
-                      </div>
-
-                      <!-- Social Links -->
-                      <div class="contact-info-item">
-                        <h6 class="font-semibold mb-md">Connect With Us</h6>
-                        <div class="social-links-contact">
-                          <a href="https://github.com/DevRW" target="_blank" class="social-link-item">
-                            <i class="fa fa-github"></i>
-                          </a>
-                          <a href="https://twitter.com/devsInRW" target="_blank" class="social-link-item">
-                            <i class="fa fa-twitter"></i>
-                          </a>
-                          <a href="https://linkedin.com/company/dev-rw" target="_blank" class="social-link-item">
-                            <i class="fa fa-linkedin"></i>
-                          </a>
-                          <a href="https://bit.ly/joinDevRWSlack" target="_blank" class="social-link-item">
-                            <i class="fa fa-slack"></i>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="col-lg-8 mb-lg">
-                  <div class="card-custom">
-                    <div class="card-body-custom">
-                      <h4 class="font-bold mb-md">Send Us a Message</h4>
-                      <p class="text-sm text-muted-custom mb-lg">
-                        Fill out the form below and we'll get back to you within 24 hours.
-                      </p>
-
-                      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm">
-                        <!-- User Type Selection -->
-                        <div class="form-group mb-lg">
-                          <label class="font-semibold mb-md" style="display: block; font-size: 0.95rem">I'm interested in: *</label>
-                          <div class="row">
-                            <div class="col-md-6 mb-sm">
-                              <div class="custom-radio-card" onclick="selectUserType('hire')">
-                                <input type="radio" name="userType" id="hireOption" value="hire" required />
-                                <label for="hireOption" class="radio-card-label">
-                                  <div class="radio-card-icon">
-                                    <i class="fa fa-users"></i>
-                                  </div>
-                                  <h6 class="font-bold mb-xs">Hiring Developers</h6>
-                                  <p class="text-xs text-muted-custom mb-0">Find skilled developers</p>
-                                </label>
-                              </div>
-                            </div>
-                            <div class="col-md-6 mb-sm">
-                              <div class="custom-radio-card" onclick="selectUserType('project')">
-                                <input type="radio" name="userType" id="projectOption" value="project" required />
-                                <label for="projectOption" class="radio-card-label">
-                                  <div class="radio-card-icon">
-                                    <i class="fa fa-rocket"></i>
-                                  </div>
-                                  <h6 class="font-bold mb-xs">Starting a Project</h6>
-                                  <p class="text-xs text-muted-custom mb-0">Build custom software</p>
-                                </label>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Common Fields -->
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group mb-md">
-                              <label class="font-semibold">Your Name *</label>
-                              <input type="text" class="form-control" name="name" required placeholder="John Doe" />
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group mb-md">
-                              <label class="font-semibold">Email Address *</label>
-                              <input type="email" class="form-control" name="email" required placeholder="john@company.com" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-md-6">
-                            <div class="form-group mb-md">
-                              <label class="font-semibold">Phone Number</label>
-                              <input type="tel" class="form-control" name="phone" placeholder="+250 788 000 000" />
-                            </div>
-                          </div>
-                          <div class="col-md-6">
-                            <div class="form-group mb-md">
-                              <label class="font-semibold">Company/Organization</label>
-                              <input type="text" class="form-control" name="company" placeholder="Your Company Name" />
-                            </div>
-                          </div>
-                        </div>
-
-                        <!-- Dynamic Fields for Hiring -->
-                        <div id="hireFields" style="display: none;">
-                          <div class="form-group mb-md">
-                            <label class="font-semibold">What role are you hiring for? *</label>
-                            <input type="text" class="form-control" name="role" id="roleInput" placeholder="e.g., Full Stack Developer, Mobile Developer" />
-                          </div>
-
-                          <div class="form-group mb-lg">
-                            <label class="font-semibold">Tell us about the role & required skills *</label>
-                            <textarea class="form-control" name="hireDetails" id="hireDetailsInput" rows="5" placeholder="Describe the role, required skills, experience level, salary range, and any other requirements..."></textarea>
-                            <small class="text-muted-custom">Please include: experience level, key skills, location requirements, and salary range if available.</small>
-                          </div>
-                        </div>
-
-                        <!-- Dynamic Fields for Project -->
-                        <div id="projectFields" style="display: none;">
-                          <div class="form-group mb-md">
-                            <label class="font-semibold">What type of project? *</label>
-                            <select class="form-control" name="projectType" id="projectTypeInput">
-                              <option value="">Select project type</option>
-                              <option value="web-app">Web Application</option>
-                              <option value="mobile-app">Mobile Application</option>
-                              <option value="api">API Development</option>
-                              <option value="mvp">MVP Development</option>
-                              <option value="consulting">Technical Consulting</option>
-                              <option value="other">Other</option>
-                            </select>
-                          </div>
-
-                          <div class="form-group mb-lg">
-                            <label class="font-semibold">Tell us about your project *</label>
-                            <textarea class="form-control" name="projectDetails" id="projectDetailsInput" rows="5" placeholder="Describe your project, goals, timeline, budget range, and any specific requirements..."></textarea>
-                            <small class="text-muted-custom">Please include: project goals, timeline, budget range, and any specific technical requirements.</small>
-                          </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-block btn-lg smooth-transition" id="submitButton" disabled>
-                          <i class="fa fa-paper-plane mr-2"></i><span id="submitButtonText">Send Message</span>
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-
-                  <!-- Quick Response Promise -->
-                  <div class="row mt-md">
-                    <div class="col-md-4 mb-sm">
-                      <div class="feature-badge">
-                        <i class="fa fa-clock-o text-primary"></i>
-                        <span class="font-semibold">24hr Response</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-sm">
-                      <div class="feature-badge">
-                        <i class="fa fa-shield text-primary"></i>
-                        <span class="font-semibold">100% Confidential</span>
-                      </div>
-                    </div>
-                    <div class="col-md-4 mb-sm">
-                      <div class="feature-badge">
-                        <i class="fa fa-check-circle text-primary"></i>
-                        <span class="font-semibold">No Obligation</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="mt-60" style="display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;">
+        <div class="card">
+          <span class="card__num">response time</span>
+          <h4 class="card__title" style="font-size:22px">Within 1 working day</h4>
+          <p class="card__body" style="font-size:14px">Real reply, not a templated auto-responder.</p>
         </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2025 <a href="index.html">DevRW</a> | All Rights Reserved
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="https://twitter.com/devsInRW" target="_blank">
-                      <i class="fa fa-twitter"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/company/dev-rw" target="_blank">
-                      <i class="fa fa-linkedin"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DevRW" target="_blank">
-                      <i class="fa fa-github"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="card">
+          <span class="card__num">discretion</span>
+          <h4 class="card__title" style="font-size:22px">Kept confidential</h4>
+          <p class="card__body" style="font-size:14px">We don't pass your details around without permission.</p>
+        </div>
+        <div class="card">
+          <span class="card__num">no obligation</span>
+          <h4 class="card__title" style="font-size:22px">Free first chat</h4>
+          <p class="card__body" style="font-size:14px">Walk away if it's not a fit. No hard sell.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Other useful forms section -->
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02</span> <span class="slash">/</span> other_forms</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Other ways <span class="italic">in.</span></h2>
+          <p class="body mt-24">All our forms run on Google Forms. Pick the one that fits and we'll handle the rest.</p>
+        </div>
+      </div>
 
-    <script>
-      // Dynamic form handling
-      function selectUserType(type) {
-        const hireOption = document.getElementById('hireOption');
-        const projectOption = document.getElementById('projectOption');
-        const hireFields = document.getElementById('hireFields');
-        const projectFields = document.getElementById('projectFields');
-        const submitButton = document.getElementById('submitButton');
-        const submitButtonText = document.getElementById('submitButtonText');
-        const roleInput = document.getElementById('roleInput');
-        const hireDetailsInput = document.getElementById('hireDetailsInput');
-        const projectTypeInput = document.getElementById('projectTypeInput');
-        const projectDetailsInput = document.getElementById('projectDetailsInput');
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">02.1</span>
+          <h3 class="card__title">Submit your developer profile</h3>
+          <p class="card__body">Get into the community talent pool. Recruiters reach us; we reach you.</p>
+          <div class="mt-24"><button class="btn btn--mint-outline btn--sm" data-modal-open="developerModal">Open form</button></div>
+        </article>
+        <article class="card">
+          <span class="card__num">02.2</span>
+          <h3 class="card__title">Submit an open source project</h3>
+          <p class="card__body">Library, tool, dataset, AI model. If it's open source and relevant, we list it on the projects page.</p>
+          <div class="mt-24"><button class="btn btn--mint-outline btn--sm" data-modal-open="submitProjectModal">Open form</button></div>
+        </article>
+        <article class="card">
+          <span class="card__num">02.3</span>
+          <h3 class="card__title">View live job openings</h3>
+          <p class="card__body">Active openings live on a public Google Sheet. View-only, updated as roles come in.</p>
+          <div class="mt-24"><a class="btn btn--mint-outline btn--sm" href="https://docs.google.com/spreadsheets/d/1znh84cfdT88ITB74C9DbuCdLhOMFGJn7TLOJwYZhqYQ/edit?usp=sharing" target="_blank" rel="noopener">Open sheet</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        // Remove active class from all cards
-        document.querySelectorAll('.custom-radio-card').forEach(card => {
-          card.classList.remove('active');
-        });
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span class="dot"></span>dev<span class="tld">.rw</span></div>
+          <p class="footer__tag">A community of Rwandan developers building open source tools for Africa. Based in Kigali, on the internet everywhere.</p>
+        </div>
+        <div class="footer__col"><h6>Site</h6>
+          <a href="index.html">Home</a><a href="community.html">Community</a><a href="projects.html">Projects</a>
+          <a href="about.html">About</a><a href="jobs.html">Jobs</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col"><h6>Open source</h6>
+          <a href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
+          <a href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">rwanda-location</a>
+          <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm package</a>
+          <a href="http://itegure.rw/" target="_blank" rel="noopener">Itegure</a>
+        </div>
+        <div class="footer__col"><h6>Connect</h6>
+          <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@dev.rw">hello@dev.rw</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 DevRW · MIT licensed where it can be.</span>
+        <span>Kigali, RW · UTC+2</span>
+      </div>
+    </div>
+  </footer>
 
-        if (type === 'hire') {
-          hireOption.checked = true;
-          hireFields.style.display = 'block';
-          projectFields.style.display = 'none';
-          submitButton.disabled = false;
-          submitButtonText.textContent = 'Request Developer CVs';
+  <div class="modal-overlay" id="developerModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Add your developer profile</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">We'll review your profile and share it with recruiters and partner companies looking for engineers in your stack.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSe0LymG8jKHbgDqLnW4m3MiSK0lPQuZufXfqiV2xXDoUFmPxg/viewform?embedded=true" loading="lazy" title="Developer profile form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-          // Make hire fields required
-          roleInput.required = true;
-          hireDetailsInput.required = true;
-          projectTypeInput.required = false;
-          projectDetailsInput.required = false;
+  <div class="modal-overlay" id="requestCVModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Request developer CVs</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Tell us about the role. We'll send matching profiles within a couple of working days.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true" loading="lazy" title="Request developer CVs form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-          // Add active class to hire card
-          document.querySelectorAll('.custom-radio-card')[0].classList.add('active');
-        } else if (type === 'project') {
-          projectOption.checked = true;
-          hireFields.style.display = 'none';
-          projectFields.style.display = 'block';
-          submitButton.disabled = false;
-          submitButtonText.textContent = 'Start Your Project';
+  <div class="modal-overlay" id="hireProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Start your project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">A short note on what you'd like to build. We'll come back with next steps within a working day.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true" loading="lazy" title="Start a project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-          // Make project fields required
-          roleInput.required = false;
-          hireDetailsInput.required = false;
-          projectTypeInput.required = true;
-          projectDetailsInput.required = true;
+  <div class="modal-overlay" id="submitProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Submit your open source project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Share your project — library, tool, dataset, AI model. If it fits, we'll add it to the projects page.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScxgaZa7jaRb4QtfKVZnNo_J00A3W6Kfnax2rKXXqkA4cJo8w/viewform?embedded=true" loading="lazy" title="Submit open source project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-          // Add active class to project card
-          document.querySelectorAll('.custom-radio-card')[1].classList.add('active');
-        }
-      }
-
-      // Form submission handling
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-        const userType = document.querySelector('input[name="userType"]:checked').value;
-
-        setTimeout(function() {
-          if (userType === 'hire') {
-            alert('Thank you for your interest in hiring developers! We will review your requirements and get back to you with matching profiles within 24 hours.');
-          } else {
-            alert('Thank you for your project inquiry! Our team will review the details and contact you within 24 hours to discuss next steps.');
-          }
-        }, 100);
-      });
-    </script>
-
-    <style>
-      /* Contact Page Specific Styles */
-      .contact-info-item {
-        padding-bottom: 1.5rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .contact-info-item:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-      }
-
-      .contact-icon-wrapper {
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, rgba(16, 208, 120, 0.15) 0%, rgba(16, 208, 120, 0.05) 100%);
-        border-radius: 8px;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      .contact-icon-wrapper i {
-        font-size: 1.25rem;
-        color: var(--primary);
-      }
-
-      .contact-info-item a {
-        font-size: 1rem;
-        font-weight: 600;
-        display: block;
-      }
-
-      .contact-info-item p {
-        margin-bottom: 0;
-      }
-
-      /* Social Links */
-      .social-links-contact {
-        display: flex;
-        gap: 0.75rem;
-      }
-
-      .social-link-item {
-        width: 40px;
-        height: 40px;
-        background-color: rgba(16, 208, 120, 0.1);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-      }
-
-      .social-link-item i {
-        font-size: 1.125rem;
-        color: var(--primary);
-      }
-
-      .social-link-item:hover {
-        background-color: var(--primary);
-        transform: translateY(-3px);
-      }
-
-      .social-link-item:hover i {
-        color: #fff;
-      }
-
-      /* Custom Radio Card Styles */
-      .custom-radio-card {
-        border: 2px solid rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 1.25rem;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        background-color: rgba(255, 255, 255, 0.02);
-        text-align: center;
-        height: 100%;
-      }
-
-      .custom-radio-card:hover {
-        border-color: var(--primary);
-        background-color: rgba(16, 208, 120, 0.05);
-        transform: translateY(-3px);
-        box-shadow: 0 6px 12px rgba(16, 208, 120, 0.2);
-      }
-
-      .custom-radio-card.active {
-        border-color: var(--primary);
-        background: linear-gradient(135deg, rgba(16, 208, 120, 0.15) 0%, rgba(16, 208, 120, 0.05) 100%);
-        box-shadow: 0 6px 12px rgba(16, 208, 120, 0.25);
-      }
-
-      .custom-radio-card input[type="radio"] {
-        display: none;
-      }
-
-      .radio-card-label {
-        cursor: pointer;
-        margin: 0;
-        display: block;
-      }
-
-      .radio-card-icon {
-        width: 48px;
-        height: 48px;
-        background: rgba(16, 208, 120, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 0.75rem;
-        transition: all 0.3s ease;
-      }
-
-      .radio-card-icon i {
-        font-size: 1.5rem;
-        color: var(--primary);
-      }
-
-      .custom-radio-card:hover .radio-card-icon,
-      .custom-radio-card.active .radio-card-icon {
-        background: var(--primary);
-        transform: scale(1.1);
-      }
-
-      .custom-radio-card:hover .radio-card-icon i,
-      .custom-radio-card.active .radio-card-icon i {
-        color: #fff;
-      }
-
-      /* Feature Badges */
-      .feature-badge {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 0.75rem 1rem;
-        background-color: rgba(255, 255, 255, 0.02);
-        border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .feature-badge i {
-        font-size: 1.125rem;
-      }
-
-      .feature-badge span {
-        font-size: 0.875rem;
-      }
-
-      @media (max-width: 768px) {
-        .contact-info-item {
-          padding-bottom: 1rem;
-        }
-      }
-    </style>
-  </body>
+  <script src="js/app.js"></script>
+</body>
 </html>

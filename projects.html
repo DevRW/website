@@ -1,731 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Projects - DevRW | Open Source Projects & Community Work</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0E0C" />
+  <meta name="color-scheme" content="dark" />
+  <title>Projects — DevRW</title>
+  <meta name="description" content="Open source projects from the DevRW community: the Rwanda Locations Library, Itegure, and AI work in progress." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <div id="main-wrapper">
-      <!-- Header -->
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="index.html">
-                    <h2 class="text-primary">DevRW</h2>
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="projects.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="jobs.html">Jobs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="signin-btn">
-                    <a class="btn btn-primary" href="contact.html" style="font-weight: 600; padding: 10px 24px">
-                      <i class="fa fa-users mr-2"></i>Hire Developers
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand"><span class="dot"></span>dev<span class="tld">.rw</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="community.html">Community</a>
+        <a class="nav__link is-active" href="projects.html">Projects</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="jobs.html">Jobs</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <button class="btn btn--primary btn--sm" data-modal-open="requestCVModal">
+          Hire developers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="nav__toggle" data-nav-toggle aria-expanded="false">Menu</button>
       </div>
+    </div>
+    <div class="nav__drawer" data-nav-drawer>
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="community.html">Community</a>
+      <a class="nav__link is-active" href="projects.html">Projects</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="jobs.html">Jobs</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-      <!-- Projects Listing Section -->
-      <div class="section-spacing page-header">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h1 class="page-title">Open Source Projects</h1>
-                <p class="page-subtitle">
-                  Building tools and solutions that benefit developers,
-                  businesses, and communities across Africa
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Projects Table -->
-          <div class="row justify-content-center mt-lg">
-            <div class="col-xl-11">
-              <div class="projects-listing-container">
-                <div style="padding: 0">
-                  <div class="table-responsive">
-                    <table class="projects-listing-table">
-                      <thead>
-                        <tr>
-                          <th>Project Name</th>
-                          <th>Type</th>
-                          <th>Impact</th>
-                          <th>Status</th>
-                          <th style="text-align: center">Actions</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Rwanda Locations Library -->
-                        <tr class="project-row" onclick="showProjectModal('rwandaLocations')">
-                          <td>
-                            <div style="display: flex; align-items: center">
-                              <div class="project-icon-container primary">
-                                <i class="fa fa-map-marker"></i>
-                              </div>
-                              <div>
-                                <h5 class="project-title">Rwanda Locations Library</h5>
-                                <small class="project-description">TypeScript library for Rwanda's administrative data</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <span class="project-badge primary">Open Source</span>
-                          </td>
-                          <td>
-                            <span class="project-impact-value">14K+</span>
-                            <span class="project-impact-label">monthly downloads</span>
-                          </td>
-                          <td>
-                            <span class="project-status active">
-                              <span class="project-status-dot"></span>
-                              Active
-                            </span>
-                          </td>
-                          <td style="text-align: center">
-                            <button class="btn btn-sm btn-primary btn-primary-custom" onclick="event.stopPropagation(); showProjectModal('rwandaLocations')">
-                              View Details
-                            </button>
-                          </td>
-                        </tr>
-
-                        <!-- Itegure Education Platform -->
-                        <tr class="project-row" onclick="showProjectModal('itegure')">
-                          <td>
-                            <div style="display: flex; align-items: center">
-                              <div class="project-icon-container warning">
-                                <i class="fa fa-graduation-cap"></i>
-                              </div>
-                              <div>
-                                <h5 class="project-title">Itegure Education Platform</h5>
-                                <small class="project-description">Web & USSD platform for Rwanda Education Board</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <span class="project-badge warning">Social Impact</span>
-                          </td>
-                          <td>
-                            <span class="project-impact-value">50K+</span>
-                            <span class="project-impact-label">parents reached</span>
-                          </td>
-                          <td>
-                            <span class="project-status active">
-                              <span class="project-status-dot"></span>
-                              Active
-                            </span>
-                          </td>
-                          <td style="text-align: center">
-                            <button class="btn btn-sm btn-primary btn-primary-custom" onclick="event.stopPropagation(); showProjectModal('itegure')">
-                              View Details
-                            </button>
-                          </td>
-                        </tr>
-
-                        <!-- Rwanda Developer Portal -->
-                        <tr class="project-row" onclick="showProjectModal('devPortal')">
-                          <td>
-                            <div style="display: flex; align-items: center">
-                              <div class="project-icon-container primary">
-                                <i class="fa fa-code"></i>
-                              </div>
-                              <div>
-                                <h5 class="project-title">Rwanda Developer Portal</h5>
-                                <small class="project-description">Community hub for Rwandan developers</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <span class="project-badge primary">Community</span>
-                          </td>
-                          <td>
-                            <span class="project-impact-value">500+</span>
-                            <span class="project-impact-label">active members</span>
-                          </td>
-                          <td>
-                            <span class="project-status development">
-                              <span class="project-status-dot"></span>
-                              In Development
-                            </span>
-                          </td>
-                          <td style="text-align: center">
-                            <button class="btn btn-sm btn-primary btn-primary-custom" onclick="event.stopPropagation(); showProjectModal('devPortal')">
-                              View Details
-                            </button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-
-              <!-- CTA Section -->
-              <div class="row mt-5">
-                <div class="col-12">
-                  <div
-                    class="text-center"
-                    style="
-                      background-color: rgba(16, 208, 120, 0.05);
-                      padding: 40px;
-                      border-radius: 12px;
-                      border: 2px solid var(--primary);
-                    "
-                  >
-                    <h3
-                      style="
-                        font-size: 1.8rem;
-                        font-weight: 700;
-                        margin-bottom: 1rem;
-                      "
-                    >
-                      Want to Contribute?
-                    </h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 2rem">
-                      All our projects are open source and welcome contributions
-                      from the community.
-                    </p>
-                    <a
-                      href="community.html"
-                      class="btn btn-primary btn-lg mr-2 mb-2"
-                    >
-                      <i class="fa fa-user-plus mr-2"></i>Join Community
-                    </a>
-                    <a
-                      href="https://github.com/DevRW"
-                      target="_blank"
-                      class="btn btn-outline-primary btn-lg mb-2"
-                      style="
-                        border-color: var(--primary);
-                        color: var(--primary);
-                      "
-                    >
-                      <i class="fa fa-github mr-2"></i>View on GitHub
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2025 <a href="index.html">DevRW</a> | All Rights
-                  Reserved
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="https://twitter.com/devsInRW" target="_blank"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/company/dev-rw"
-                      target="_blank"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DevRW" target="_blank"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow page-head__index">projects / open_source</span>
+        <h1 class="display-xl">Two projects. <span class="italic">Both real.</span></h1>
+        <p class="lead">
+          We don't have a sprawling portfolio. We have two production projects that the community
+          maintains, plus the client work that funds them and the AI work members are publishing as it matures.
+          That's the honest picture.
+        </p>
+        <div class="flex flex-wrap gap-12 mt-40">
+          <button class="btn btn--primary btn--lg" data-modal-open="submitProjectModal">Submit your project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <a class="btn btn--ghost btn--lg" href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Project Modals -->
+  <section class="section section--bg-2">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">01</span> <span class="slash">/</span> rwanda_locations</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Rwanda's administrative tree, <span class="italic">one npm install away.</span></h2>
+          <p class="body mt-24">
+            A TypeScript library that gives you typed access to the country's administrative divisions —
+            provinces, districts, sectors, cells, and villages. Built for developers who'd rather not scrape a PDF.
+          </p>
+        </div>
+      </div>
 
-    <!-- Rwanda Locations Modal -->
-    <div
-      class="modal fade"
-      id="rwandaLocationsModal"
-      tabindex="-1"
-      role="dialog"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title">
-              <i class="fa fa-map-marker text-primary mr-2"></i>
-              Rwanda Locations Library
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span>&times;</span>
-            </button>
+      <div class="codeblock">
+        <span><span class="prompt">$</span>npm install @devrw/rwanda-location</span>
+        <button class="codeblock__copy" data-copy="npm install @devrw/rwanda-location">Copy</button>
+      </div>
+
+      <div class="cards mt-40">
+        <article class="card">
+          <span class="card__num">coverage</span>
+          <h3 class="card__title" style="font-size:34px">14,837<span class="mono" style="font-size:13px;color:var(--ink-3);margin-left:8px">villages</span></h3>
+          <p class="card__body">Full village-level granularity. Also: 5 provinces, 30 districts, 416 sectors, 2,148 cells.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">downloads</span>
+          <h3 class="card__title" style="font-size:34px">~1,000<span class="mono" style="font-size:13px;color:var(--ink-3);margin-left:8px">/ year</span></h3>
+          <p class="card__body">Honest figure from the npm registry. Modest, growing — used by teams in Rwanda and the diaspora.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">licence</span>
+          <h3 class="card__title" style="font-size:34px">MIT</h3>
+          <p class="card__body">Fork it, ship it, sell something built on top of it. Just credit the maintainers.</p>
+        </article>
+      </div>
+
+      <div class="mt-40 flex flex-wrap gap-12">
+        <a class="btn btn--primary" href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">View on GitHub
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn--ghost" href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">Read on npm</a>
+      </div>
+
+      <div class="mt-40 tag-row">
+        <span class="tag">typescript</span>
+        <span class="tag">node.js</span>
+        <span class="tag">mit</span>
+        <span class="tag">14k villages</span>
+        <span class="tag">multi-language</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02</span> <span class="slash">/</span> itegure</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">A platform built <span class="italic">when schools closed.</span></h2>
+          <p class="body mt-24">
+            Itegure is a web &amp; USSD platform we built with the <strong style="color:var(--ink)">Rwanda Education Board</strong> in 2020,
+            during COVID-19 school closures. The goal: keep parents in touch with their children's learning when
+            schools couldn't.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="card">
+          <span class="card__num">02.1</span>
+          <h3 class="card__title">USSD where USSD makes sense.</h3>
+          <p class="card__body">
+            Most Rwandan parents are reachable on feature phones. Itegure ships a USSD interface alongside
+            a standard web app, in English, Kinyarwanda, and French.
+          </p>
+          <ul class="card__list">
+            <li>Web &amp; USSD parallel access</li>
+            <li>Multi-language: EN · KIN · FR</li>
+            <li>SMS notifications</li>
+            <li>Built with Rwanda Education Board</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="card__num">02.2</span>
+          <h3 class="card__title">Built fast, built for the place.</h3>
+          <p class="card__body">
+            Concept to deployment in weeks, not quarters — because the team understood the local context,
+            the ministry constraints, and the technology that actually reaches Rwandan families.
+          </p>
+          <div class="tag-row mt-24">
+            <span class="tag">node.js</span>
+            <span class="tag">react</span>
+            <span class="tag">postgresql</span>
+            <span class="tag">ussd gateway</span>
+            <span class="tag">sms</span>
           </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <span
-                class="badge"
-                style="
-                  background-color: var(--primary);
-                  color: #fff;
-                  padding: 6px 12px;
-                "
-                >OPEN SOURCE LIBRARY</span
-              >
-            </div>
+        </article>
+      </div>
 
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem">
-              A production-ready TypeScript library providing comprehensive
-              access to Rwanda's administrative divisions. Powers address forms,
-              location pickers, and geospatial applications across multiple
-              organizations.
-            </p>
+      <div class="mt-40">
+        <a class="btn btn--primary" href="http://itegure.rw/" target="_blank" rel="noopener">Visit itegure.rw
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            <div class="row mb-4">
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  14,837
-                </h4>
-                <small style="opacity: 0.8">Villages Covered</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  14K+
-                </h4>
-                <small style="opacity: 0.8">Monthly Downloads</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  98%
-                </h4>
-                <small style="opacity: 0.8">Test Coverage</small>
-              </div>
-            </div>
+  <!-- Community member projects -->
+  <section class="section section--bg-2" id="member-projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02b</span> <span class="slash">/</span> community_members</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Projects from <span class="italic">members.</span></h2>
+          <p class="body mt-24">Open source work shipped by individual community members. We list — we don't gate-keep. Submit yours via the form below.</p>
+        </div>
+      </div>
 
-            <div
-              style="
-                background-color: rgba(255, 255, 255, 0.05);
-                padding: 20px;
-                border-radius: 8px;
-                margin-bottom: 1.5rem;
-              "
-            >
-              <h6 style="font-weight: 700; margin-bottom: 1rem">Use Cases:</h6>
-              <ul style="margin-bottom: 0">
-                <li>Government systems & public services</li>
-                <li>E-commerce delivery management</li>
-                <li>Financial services KYC forms</li>
-                <li>Healthcare facility locators</li>
-              </ul>
-            </div>
+      <table class="proj-table">
+        <thead>
+          <tr><th>project</th><th>by</th><th>type</th><th>links</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h4 class="proj-name"><span class="proj-marker"></span>text-db-query-ai</h4>
+              <p class="proj-desc">Secure LLM-powered converter that turns natural language into database queries. Multi-ORM support, SQL-injection prevention, access controls, row-level filtering.</p>
+            </td>
+            <td>
+              <span class="mono" style="color:var(--ink-2)"><a href="https://github.com/jnkindi" target="_blank" rel="noopener" style="color:var(--ink)">@jnkindi</a></span>
+            </td>
+            <td>
+              <span class="badge badge--sky">ai · llm</span>
+              <div class="mono mt-12" style="font-size:11.5px;color:var(--ink-3)">typescript · mit</div>
+            </td>
+            <td>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/jnkindi/text-db-query-ai" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--ghost btn--sm" href="https://www.npmjs.com/package/text-db-query-ai" target="_blank" rel="noopener">npm</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
 
-            <div
-              style="
-                background-color: rgba(16, 208, 120, 0.1);
-                padding: 20px;
-                border-radius: 8px;
-                border-left: 4px solid var(--primary);
-                margin-bottom: 1.5rem;
-              "
-            >
-              <h6 style="font-weight: 700; margin-bottom: 0.5rem">
-                Installation:
-              </h6>
-              <code
-                style="
-                  background-color: rgba(0, 0, 0, 0.3);
-                  padding: 8px 12px;
-                  border-radius: 4px;
-                  display: block;
-                "
-              >
-                npm install @devrw/rwanda-location
-              </code>
-            </div>
+      <div class="mt-40 codeblock">
+        <span><span class="prompt">$</span>npm install text-db-query-ai</span>
+        <button class="codeblock__copy" data-copy="npm install text-db-query-ai">Copy</button>
+      </div>
 
-            <div>
-              <strong>Tech Stack:</strong> TypeScript, Node.js, Jest<br />
-              <strong>License:</strong> MIT
-            </div>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <a
-              href="https://github.com/DevRW/rwanda-location"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              <i class="fa fa-github mr-2"></i>View on GitHub
-            </a>
-            <a
-              href="https://www.npmjs.com/package/@devrw/rwanda-location"
-              target="_blank"
-              class="btn btn-outline-primary"
-              style="border-color: var(--primary); color: var(--primary)"
-            >
-              <i class="fa fa-cube mr-2"></i>npm Package
-            </a>
-          </div>
+      <div class="mt-40 cta-block">
+        <div>
+          <h3>Have an open source project of your own?</h3>
+          <p class="body">Submit it via the form. If it's open source and relevant, it gets listed here — no curation gate.</p>
+        </div>
+        <div class="cta-block__actions">
+          <button class="btn btn--mint-outline" data-modal-open="submitProjectModal">Submit your project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Itegure Modal -->
-    <div class="modal fade" id="itegureModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title">
-              <i class="fa fa-graduation-cap text-primary mr-2"></i>
-              Itegure Education Platform
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <span
-                class="badge"
-                style="
-                  background-color: #ffb400;
-                  color: #fff;
-                  padding: 6px 12px;
-                "
-                >SOCIAL IMPACT</span
-              >
-            </div>
+  <!-- AI section -->
+  <section class="section section--bg" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">03</span> <span class="slash">/</span> ai_in_progress</span>
+        <div class="sec-head__intro">
+          <span class="ai-badge">in progress · open source</span>
+          <h2 class="display-l mt-24">AI work we're <span class="italic">publishing</span> as it ships.</h2>
+          <p class="body mt-24">
+            The community's AI projects are still maturing. We list things here once they're real enough to use.
+            Until then, the work happens in the open in <span class="chip">#ai</span> on WhatsApp — and you're welcome to join in.
+          </p>
+        </div>
+      </div>
 
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem">
-              Web and USSD platform built in partnership with Rwanda Education
-              Board (REB). Delivered critical educational information to parents
-              during COVID-19 school closures, enabling continuous learning
-              through TV and radio programs.
-            </p>
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">03.1</span>
+          <h3 class="card__title">Kinyarwanda model evals</h3>
+          <p class="card__body">A growing public scoreboard of how open LLMs handle Kinyarwanda — translation, summarisation, classification. The community runs the tests; results are shared.</p>
+          <span class="badge badge--sky mt-12" style="align-self:flex-start">status · in progress</span>
+        </article>
+        <article class="card">
+          <span class="card__num">03.2</span>
+          <h3 class="card__title">USSD + LLM bot framework</h3>
+          <p class="card__body">Reference architecture and code for putting an LLM behind a USSD menu — for low-bandwidth, feature-phone-friendly conversational interfaces.</p>
+          <span class="badge badge--sky mt-12" style="align-self:flex-start">status · drafting</span>
+        </article>
+        <article class="card">
+          <span class="card__num">03.3</span>
+          <h3 class="card__title">Rwanda dataset hub</h3>
+          <p class="card__body">An open index of Rwanda-relevant datasets — administrative, linguistic, agricultural — curated by community members for AI / ML training.</p>
+          <span class="badge badge--sky mt-12" style="align-self:flex-start">status · scoping</span>
+        </article>
+      </div>
 
-            <div class="row mb-4">
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  50K+
-                </h4>
-                <small style="opacity: 0.8">Parents Reached</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  100%
-                </h4>
-                <small style="opacity: 0.8">SMS Delivery Rate</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  2 weeks
-                </h4>
-                <small style="opacity: 0.8">Deployment Time</small>
-              </div>
-            </div>
-
-            <div
-              style="
-                background-color: rgba(255, 255, 255, 0.05);
-                padding: 20px;
-                border-radius: 8px;
-                margin-bottom: 1.5rem;
-              "
-            >
-              <h6 style="font-weight: 700; margin-bottom: 1rem">
-                Key Features:
-              </h6>
-              <ul style="margin-bottom: 0">
-                <li>USSD integration for feature phones</li>
-                <li>Automated SMS reminder system</li>
-                <li>Program schedule management</li>
-                <li>Multi-language support (EN, KIN, FR)</li>
-              </ul>
-            </div>
-
-            <div
-              style="
-                background-color: rgba(16, 208, 120, 0.1);
-                padding: 20px;
-                border-radius: 8px;
-                border-left: 4px solid var(--primary);
-                margin-bottom: 1.5rem;
-              "
-            >
-              <h6 style="font-weight: 700; color: var(--primary)">Impact:</h6>
-              <p style="margin-bottom: 0">
-                Rapid deployment in 2 weeks. Scaled to reach thousands of
-                families nationwide. Demonstrated our ability to deliver
-                mission-critical systems under tight deadlines during a national
-                crisis.
-              </p>
-            </div>
-
-            <div>
-              <strong>Tech Stack:</strong> Node.js, React, PostgreSQL, USSD
-              Gateway<br />
-              <strong>Partner:</strong> Rwanda Education Board (REB)
-            </div>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <a
-              href="http://itegure.rw/"
-              target="_blank"
-              class="btn btn-primary"
-            >
-              <i class="fa fa-external-link mr-2"></i>Visit Website
-            </a>
-          </div>
+      <div class="mt-40 cta-block">
+        <div>
+          <h3>Building something AI-related?</h3>
+          <p class="body">If you'd like your project listed under this section, drop the details via the form. We don't gate — if it's open source and relevant, we list it.</p>
+        </div>
+        <div class="cta-block__actions">
+          <button class="btn btn--primary" data-modal-open="submitProjectModal">Submit your project
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Dev Portal Modal -->
-    <div class="modal fade" id="devPortalModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title">
-              <i class="fa fa-code text-primary mr-2"></i>
-              Rwanda Developer Portal
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <span
-                class="badge"
-                style="
-                  background-color: var(--primary);
-                  color: #fff;
-                  padding: 6px 12px;
-                "
-                >COMMUNITY PLATFORM</span
-              >
-              <span
-                class="badge"
-                style="
-                  background-color: #ffb400;
-                  color: #fff;
-                  padding: 6px 12px;
-                  margin-left: 8px;
-                "
-                >IN DEVELOPMENT</span
-              >
-            </div>
-
-            <p style="font-size: 1.1rem; line-height: 1.7; margin-bottom: 2rem">
-              A comprehensive platform for Rwandan developers to connect,
-              collaborate, and grow. Features include job boards, project
-              showcases, learning resources, and community events calendar.
-            </p>
-
-            <div class="row mb-4">
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  500+
-                </h4>
-                <small style="opacity: 0.8">Active Members</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  50+
-                </h4>
-                <small style="opacity: 0.8">Partner Companies</small>
-              </div>
-              <div class="col-md-4 mb-3">
-                <h4
-                  class="text-primary mb-0"
-                  style="font-size: 2rem; font-weight: 700"
-                >
-                  Q2 2025
-                </h4>
-                <small style="opacity: 0.8">Expected Launch</small>
-              </div>
-            </div>
-
-            <div
-              style="
-                background-color: rgba(255, 255, 255, 0.05);
-                padding: 20px;
-                border-radius: 8px;
-                margin-bottom: 1.5rem;
-              "
-            >
-              <h6 style="font-weight: 700; margin-bottom: 1rem">
-                Planned Features:
-              </h6>
-              <ul style="margin-bottom: 0">
-                <li>Developer profiles and portfolios</li>
-                <li>Job board with company listings</li>
-                <li>Project showcase and collaboration tools</li>
-                <li>Learning resources and tutorials</li>
-                <li>Community events calendar</li>
-                <li>Mentorship matching system</li>
-              </ul>
-            </div>
-
-            <div
-              style="
-                background-color: rgba(16, 208, 120, 0.1);
-                padding: 20px;
-                border-radius: 8px;
-                border-left: 4px solid var(--primary);
-              "
-            >
-              <h6 style="font-weight: 700; color: var(--primary)">
-                Want to Contribute?
-              </h6>
-              <p style="margin-bottom: 0">
-                We're actively building this platform and welcome contributions
-                from developers, designers, and community members. Join our
-                Slack to get involved!
-              </p>
-            </div>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <a href="community.html" class="btn btn-primary">
-              <i class="fa fa-user-plus mr-2"></i>Join Community
-            </a>
-          </div>
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">04</span> <span class="slash">/</span> contribute</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Three ways to <span class="italic">jump in.</span></h2>
+          <p class="body mt-24">If you've got time, code, or a problem worth solving — we want to hear about it.</p>
         </div>
       </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">04.1</span>
+          <h3 class="card__title">Open an issue or PR</h3>
+          <p class="card__body">The rwanda-location repo has open issues for new helpers, data fixes, and DX improvements. Good first issues are tagged.</p>
+          <div class="mt-24"><a class="btn btn--ghost btn--sm" href="https://github.com/DevRW/rwanda-location/issues" target="_blank" rel="noopener">Browse issues</a></div>
+        </article>
+        <article class="card">
+          <span class="card__num">04.2</span>
+          <h3 class="card__title">Propose a project</h3>
+          <p class="card__body">Got an open source idea that fits the African context? Pitch it in #ideas on WhatsApp, or submit it via the form.</p>
+          <div class="mt-24 flex gap-12 flex-wrap">
+            <button class="btn btn--ghost btn--sm" data-modal-open="submitProjectModal">Submit via form</button>
+            <a class="btn btn--ghost btn--sm" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">#ideas in whatsapp</a>
+          </div>
+        </article>
+        <article class="card">
+          <span class="card__num">04.3</span>
+          <h3 class="card__title">Hire us to build</h3>
+          <p class="card__body">Got a project that needs a team? Paying us means paying community developers — and indirectly funding the open source work.</p>
+          <div class="mt-24"><button class="btn btn--ghost btn--sm" data-modal-open="hireProjectModal">Start a project</button></div>
+        </article>
+      </div>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span class="dot"></span>dev<span class="tld">.rw</span></div>
+          <p class="footer__tag">A community of Rwandan developers building open source tools for Africa. Based in Kigali, on the internet everywhere.</p>
+        </div>
+        <div class="footer__col"><h6>Site</h6>
+          <a href="index.html">Home</a><a href="community.html">Community</a><a href="projects.html">Projects</a>
+          <a href="about.html">About</a><a href="jobs.html">Jobs</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col"><h6>Open source</h6>
+          <a href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
+          <a href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">rwanda-location</a>
+          <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm package</a>
+          <a href="http://itegure.rw/" target="_blank" rel="noopener">Itegure</a>
+        </div>
+        <div class="footer__col"><h6>Connect</h6>
+          <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@dev.rw">hello@dev.rw</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 DevRW · MIT licensed where it can be.</span>
+        <span>Kigali, RW · UTC+2</span>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-      function showProjectModal(projectId) {
-        const modalIds = {
-          rwandaLocations: "rwandaLocationsModal",
-          itegure: "itegureModal",
-          devPortal: "devPortalModal",
-        };
-        $("#" + modalIds[projectId]).modal("show");
-      }
-    </script>
+  <div class="modal-overlay" id="developerModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Add your developer profile</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">We'll review your profile and share it with recruiters and partner companies looking for engineers in your stack.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSe0LymG8jKHbgDqLnW4m3MiSK0lPQuZufXfqiV2xXDoUFmPxg/viewform?embedded=true" loading="lazy" title="Developer profile form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-  </body>
+  <div class="modal-overlay" id="requestCVModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Request developer CVs</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Tell us about the role. We'll send matching profiles within a couple of working days.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true" loading="lazy" title="Request developer CVs form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="hireProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Start your project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">A short note on what you'd like to build. We'll come back with next steps within a working day.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true" loading="lazy" title="Start a project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="submitProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Submit your open source project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Share your project — library, tool, dataset, AI model. If it fits, we'll add it to the projects page.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScxgaZa7jaRb4QtfKVZnNo_J00A3W6Kfnax2rKXXqkA4cJo8w/viewform?embedded=true" loading="lazy" title="Submit open source project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
 </html>

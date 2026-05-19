@@ -1,2320 +1,608 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0E0C" />
+  <meta name="color-scheme" content="dark" />
 
-    <!-- Primary Meta Tags -->
-    <title>
-      DevRW - Rwanda's Open Source Developer Community | Build Tools, Share
-      Knowledge
-    </title>
-    <meta
-      name="title"
-      content="DevRW - Rwanda's Open Source Developer Community | Build Tools, Share Knowledge"
-    />
-    <meta
-      name="description"
-      content="Join Rwanda's largest community of software developers building open source tools and solutions. Collaborate on projects, learn new skills, and connect with 500+ developers across Africa."
-    />
-    <meta
-      name="keywords"
-      content="Rwanda developers, open source Rwanda, developer community Kigali, software engineers Rwanda, tech community Africa, DevRW, rwanda-location library, developer collaboration, coding community Rwanda"
-    />
-    <meta name="author" content="DevRW Community" />
-    <meta name="robots" content="index, follow" />
+  <title>DevRW — Open source, built in Kigali.</title>
+  <meta name="description" content="DevRW is a community of Rwandan developers building open source tools for Africa. We maintain the Rwanda Locations library, study AI together, and partner with organisations on practical software." />
+  <meta name="author" content="DevRW" />
+  <meta name="robots" content="index, follow" />
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://dev.rw/" />
-    <meta
-      property="og:title"
-      content="DevRW - Rwanda's Open Source Developer Community"
-    />
-    <meta
-      property="og:description"
-      content="Join 500+ developers building open source tools and solutions for Africa. Collaborate, learn, and grow with Rwanda's premier tech community."
-    />
-    <meta
-      property="og:image"
-      content="https://dev.rw/images/devrw-og-image.png"
-    />
-    <meta property="og:site_name" content="DevRW" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dev.rw/" />
+  <meta property="og:title" content="DevRW — Open source, built in Kigali." />
+  <meta property="og:description" content="A community of Rwandan developers building open source tools — and studying AI — in Kigali." />
+  <meta property="og:image" content="https://dev.rw/images/logo.png" />
+  <meta property="og:site_name" content="DevRW" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://dev.rw/" />
-    <meta
-      property="twitter:title"
-      content="DevRW - Rwanda's Open Source Developer Community"
-    />
-    <meta
-      property="twitter:description"
-      content="Join 500+ developers building open source tools and solutions for Africa. Collaborate, learn, and grow with Rwanda's premier tech community."
-    />
-    <meta
-      property="twitter:image"
-      content="https://dev.rw/images/devrw-og-image.png"
-    />
-    <meta name="twitter:site" content="@devsInRW" />
-    <meta name="twitter:creator" content="@devsInRW" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@devsInRW" />
+  <meta name="twitter:creator" content="@devsInRW" />
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://dev.rw/" />
+  <link rel="canonical" href="https://dev.rw/" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="apple-touch-icon" href="images/logo.png" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-    <link rel="apple-touch-icon" href="images/logo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DevRW",
+    "alternateName": "Developers Rwanda",
+    "url": "https://dev.rw",
+    "logo": "https://dev.rw/images/logo.png",
+    "description": "A community of Rwandan developers building open source tools for Africa.",
+    "foundingDate": "2020",
+    "address": { "@type": "PostalAddress", "addressLocality": "Kigali", "addressCountry": "Rwanda" },
+    "sameAs": [
+      "https://twitter.com/devsInRW",
+      "https://linkedin.com/company/dev-rw",
+      "https://github.com/DevRW"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "General Inquiries",
+      "email": "hello@dev.rw",
+      "availableLanguage": ["English", "Kinyarwanda", "French"]
+    }
+  }
+  </script>
 
-    <!-- Structured Data - Organization -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "DevRW",
-        "alternateName": "Developers Rwanda",
-        "url": "https://dev.rw",
-        "logo": "https://dev.rw/images/logo.png",
-        "description": "Rwanda's premier open source developer community building tools and solutions for Africa",
-        "foundingDate": "2020",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Kigali",
-          "addressCountry": "Rwanda"
-        },
-        "sameAs": [
-          "https://twitter.com/devsInRW",
-          "https://linkedin.com/company/dev-rw",
-          "https://github.com/DevRW",
-          "https://bit.ly/joinDevRWSlack"
-        ],
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+250-788-662-441",
-          "contactType": "General Inquiries",
-          "email": "hello@dev.rw",
-          "availableLanguage": ["English", "Kinyarwanda", "French"]
-        }
-      }
-    </script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <!-- Structured Data - Software Application (Rwanda Locations Library) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
-        "name": "Rwanda Locations Library",
-        "applicationCategory": "DeveloperApplication",
-        "operatingSystem": "Cross-platform",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        },
-        "description": "TypeScript library providing comprehensive access to Rwanda's administrative divisions - 5 provinces, 30 districts, 416 sectors, 2,148 cells, and 14,837 villages",
-        "url": "https://github.com/DevRW/rwanda-location",
-        "downloadUrl": "https://www.npmjs.com/package/@devrw/rwanda-location",
-        "softwareVersion": "latest",
-        "creator": {
-          "@type": "Organization",
-          "name": "DevRW"
-        }
-      }
-    </script>
+  <!-- ============ NAV (uniform across all pages) ============ -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand"><span class="dot"></span>dev<span class="tld">.rw</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link is-active" href="index.html">Home</a>
+        <a class="nav__link" href="community.html">Community</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="jobs.html">Jobs</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <button class="btn btn--primary btn--sm" data-modal-open="requestCVModal">
+          Hire developers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="nav__toggle" data-nav-toggle aria-expanded="false">Menu</button>
+      </div>
+    </div>
+    <div class="nav__drawer" data-nav-drawer>
+      <a class="nav__link is-active" href="index.html">Home</a>
+      <a class="nav__link" href="community.html">Community</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link" href="jobs.html">Jobs</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <div id="main-wrapper">
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="index.html">
-                    <h2 class="text-primary">DevRW</h2>
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                    aria-controls="navbarNavDropdown"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="jobs.html">Jobs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div class="signin-btn">
-                    <button class="btn btn-primary" data-toggle="modal" data-target="#requestCVModal" style="font-weight: 600; padding: 10px 24px">
-                      <i class="fa fa-users mr-2"></i>Hire Developers
-                    </button>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero__meta">
+        <span class="eyebrow">est_2020 · kigali_rw</span>
+        <span class="pulse"><span class="pulse-dot"></span> active · open source · community-run</span>
       </div>
 
-      <div class="intro" id="home">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-10 text-center">
-              <div class="intro-content">
-                <h1
-                  style="
-                    font-size: 3.5rem;
-                    font-weight: 700;
-                    margin-bottom: 1.5rem;
-                    line-height: 1.2;
-                  "
-                >
-                  Build <strong class="text-primary">Open Source</strong> Tools
-                </h1>
-                <p
-                  style="
-                    font-size: 1.3rem;
-                    max-width: 800px;
-                    margin: 0 auto 2rem;
-                    opacity: 0.9;
-                  "
-                >
-                  Join Rwanda's vibrant community of developers building
-                  innovative open source solutions. Collaborate on projects,
-                  share knowledge, and grow together while solving real
-                  problems.
-                </p>
-              </div>
-
-              <div class="intro-btn mb-5">
-                <a
-                  href="https://bit.ly/joinDevRWSlack"
-                  target="_blank"
-                  class="btn btn-primary btn-lg mr-2 mb-2"
-                >
-                  <i class="fa fa-slack mr-2"></i>Join Our Community
-                </a>
-                <a
-                  href="#projects"
-                  class="btn btn-outline-primary btn-lg mb-2"
-                  style="border-color: var(--primary); color: var(--primary)"
-                >
-                  <i class="fa fa-code mr-2"></i>Explore Projects
-                </a>
-              </div>
-
-              <div
-                class="row mt-5 pt-4"
-                style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-              >
-                <div class="col-md-3 mb-3">
-                  <h3
-                    class="text-primary"
-                    style="font-size: 2.5rem; font-weight: 700"
-                  >
-                    500+
-                  </h3>
-                  <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 0">
-                    Active Developers
-                  </p>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <h3
-                    class="text-primary"
-                    style="font-size: 2.5rem; font-weight: 700"
-                  >
-                    10+
-                  </h3>
-                  <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 0">
-                    Open Source Projects
-                  </p>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <h3
-                    class="text-primary"
-                    style="font-size: 2.5rem; font-weight: 700"
-                  >
-                    14K+
-                  </h3>
-                  <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 0">
-                    npm Downloads/Month
-                  </p>
-                </div>
-                <div class="col-md-3 mb-3">
-                  <h3
-                    class="text-primary"
-                    style="font-size: 2.5rem; font-weight: 700"
-                  >
-                    100%
-                  </h3>
-                  <p style="font-size: 1rem; opacity: 0.8; margin-bottom: 0">
-                    Open Source
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Join the Community Section - Community First! -->
-      <div
-        class="portfolio section-padding"
-        id="community"
-        style="background-color: #2d3436"
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>Join the Community</h2>
-                <p>
-                  DevRW is Rwanda's home for software developers, engineers, and
-                  tech enthusiasts passionate about open source. We collaborate
-                  on projects, share knowledge through meetups and workshops,
-                  and build tools that solve real problems across Africa.
-                </p>
-                <p class="mt-4 mb-0">
-                  Whether you're just starting your coding journey or you're an
-                  experienced developer, there's a place for you here. Learn,
-                  contribute, and grow with 500+ developers across Rwanda and
-                  beyond.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-5 justify-content-center">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-users"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Collaborate & Learn</h4>
-                  <p>
-                    Work on open source projects with experienced developers.
-                    Learn new technologies, best practices, and contribute to
-                    real-world applications.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-calendar"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Events & Meetups</h4>
-                  <p>
-                    Attend workshops, hackathons, and tech talks. Network with
-                    fellow developers and learn from industry experts in Kigali
-                    and online.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100 text-center">
-                <div class="card-body">
-                  <i
-                    class="fa fa-lightbulb-o"
-                    style="font-size: 3rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Share Knowledge</h4>
-                  <p>
-                    Get help, share your expertise, and discuss tech trends on
-                    our active Slack community. Everyone's voice matters.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-12 text-center">
-              <a
-                href="https://bit.ly/joinDevRWSlack"
-                target="_blank"
-                class="btn btn-primary btn-lg mr-2 mb-2"
-              >
-                <i class="fa fa-slack mr-2"></i>Join Slack Community
+      <div class="rise">
+        <h1 class="display-xl hero__headline">
+          Open&nbsp;source<br/>
+          <span class="accent">built</span> in Kigali.
+        </h1>
+        <div class="hero__grid hero__grid--single">
+          <div>
+            <p class="hero__lead">
+              A community of Rwandan software developers — maintaining open source libraries,
+              shipping locally-rooted software, studying AI together, and creating paid work for one another.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn--primary btn--lg" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">
+                Join the community
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
               </a>
-              <button
-                class="btn btn-outline-primary btn-lg mb-2"
-                style="border-color: var(--primary); color: var(--primary)"
-                data-toggle="modal"
-                data-target="#developerModal"
-              >
-                <i class="fa fa-user-plus mr-2"></i>Add Your Profile
-              </button>
+              <a class="btn btn--ghost btn--lg" href="projects.html">Browse projects</a>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- How We Sustain the Community -->
-      <div class="trade-app section-padding" id="about">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>How We Sustain the Community</h2>
-                <p>
-                  Building sustainable open source through professional services
-                  that create opportunities for our developers
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mb-4">
-            <div class="col-xl-10 col-lg-11">
-              <div
-                class="text-center"
-                style="
-                  background-color: rgba(16, 208, 120, 0.05);
-                  padding: 30px;
-                  border-radius: 12px;
-                  border-left: 4px solid var(--primary);
-                "
-              >
-                <p
-                  style="font-size: 1.15rem; line-height: 1.8; margin-bottom: 0"
-                >
-                  Open source is our passion, but sustainability requires
-                  support. When businesses hire DevRW for projects or team
-                  augmentation, they're not just getting quality
-                  software—they're
-                  <strong class="text-primary"
-                    >funding our open source initiatives</strong
-                  >, providing
-                  <strong class="text-primary"
-                    >paid opportunities for community developers</strong
-                  >, and helping us maintain free tools like the Rwanda
-                  Locations Library.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-4 text-center">
-                    <i
-                      class="fa fa-laptop"
-                      style="font-size: 3.5rem; color: var(--primary)"
-                    ></i>
-                  </div>
-                  <h4 class="card-title text-center mb-3">
-                    Custom Software Development
-                  </h4>
-                  <p class="text-center mb-4">
-                    Community members build production-ready applications using
-                    modern technologies. Every project creates learning
-                    opportunities and funds our open source work.
-                  </p>
-                  <ul
-                    class="text-left mt-3"
-                    style="
-                      list-style: none;
-                      padding-left: 0;
-                      font-size: 0.95rem;
-                    "
-                  >
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Web
-                      Applications & Platforms
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Mobile Apps
-                      (iOS/Android)
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Progressive
-                      Web Apps (PWAs)
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> E-commerce
-                      Solutions
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Cloud &
-                      DevOps Integration
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-4 text-center">
-                    <i
-                      class="fa fa-users"
-                      style="font-size: 3.5rem; color: var(--primary)"
-                    ></i>
-                  </div>
-                  <h4 class="card-title text-center mb-3">
-                    Developer Opportunities
-                  </h4>
-                  <p class="text-center mb-4">
-                    We connect community developers with companies needing
-                    talent. It's a win-win: developers get paid work, companies
-                    get skilled engineers.
-                  </p>
-                  <ul
-                    class="text-left mt-3"
-                    style="
-                      list-style: none;
-                      padding-left: 0;
-                      font-size: 0.95rem;
-                    "
-                  >
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Vetted
-                      Community Developers
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Flexible
-                      Work Arrangements
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Fair
-                      Compensation
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Remote or
-                      On-site Options
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Career
-                      Growth Support
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-4 text-center">
-                    <i
-                      class="fa fa-code-fork"
-                      style="font-size: 3.5rem; color: var(--primary)"
-                    ></i>
-                  </div>
-                  <h4 class="card-title text-center mb-3">Open Source Tools</h4>
-                  <p class="text-center mb-4">
-                    Revenue from professional services funds the development and
-                    maintenance of free, open source tools that benefit the
-                    entire African tech ecosystem.
-                  </p>
-                  <ul
-                    class="text-left mt-3"
-                    style="
-                      list-style: none;
-                      padding-left: 0;
-                      font-size: 0.95rem;
-                    "
-                  >
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Free & Open
-                      Source Libraries
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i>
-                      Comprehensive Documentation
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Active
-                      Maintenance
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Community
-                      Support
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> 100% MIT
-                      Licensed
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row mt-4">
-            <div class="col-12">
-              <div
-                class="text-center"
-                style="
-                  background-color: rgba(16, 208, 120, 0.05);
-                  padding: 40px;
-                  border-radius: 12px;
-                "
-              >
-                <h4
-                  style="
-                    font-size: 1.6rem;
-                    font-weight: 700;
-                    margin-bottom: 1rem;
-                  "
-                >
-                  Work With Us, Support the Community
-                </h4>
-                <p
-                  style="
-                    font-size: 1.1rem;
-                    max-width: 800px;
-                    margin: 0 auto 2rem;
-                    opacity: 0.9;
-                  "
-                >
-                  When you hire DevRW, you're partnering with talented
-                  developers AND supporting Rwanda's open source ecosystem.
-                  Let's build something great together.
-                </p>
-                <button
-                  class="btn btn-primary btn-lg mr-2 mb-2"
-                  data-toggle="modal"
-                  data-target="#hireProjectModal"
-                >
-                  <i class="fa fa-briefcase mr-2"></i>Start a Project
-                </button>
-                <button
-                  class="btn btn-outline-primary btn-lg mb-2"
-                  style="border-color: var(--primary); color: var(--primary)"
-                  data-toggle="modal"
-                  data-target="#requestCVModal"
-                >
-                  <i class="fa fa-users mr-2"></i>Hire a Developer
-                </button>
-              </div>
-            </div>
-          </div>
+      <!-- Honest stats strip -->
+      <div class="stats" style="grid-template-columns: repeat(3, minmax(0, 1fr))">
+        <div class="stat" data-marker="01">
+          <span class="stat__num">5<span class="unit">yrs</span></span>
+          <span class="stat__lbl">building together</span>
+          <div class="stat__note">since 2020</div>
         </div>
-      </div>
-
-      <!-- Featured Projects Section -->
-      <div class="trade-app section-padding" id="projects">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>Our Open Source Projects & Community Work</h2>
-                <p>
-                  Building tools and solutions that benefit developers,
-                  businesses, and communities across Africa
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Projects Listing -->
-          <div class="row justify-content-center mt-lg">
-            <div class="col-xl-11">
-              <div class="projects-listing-container">
-                <div style="padding: 0">
-                  <div class="table-responsive">
-                    <table class="projects-listing-table">
-                      <thead>
-                        <tr>
-                          <th>Project Name</th>
-                          <th>Type</th>
-                          <th>Impact</th>
-                          <th style="text-align: center">Links</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <!-- Rwanda Locations Library -->
-                        <tr class="project-row">
-                          <td>
-                            <div style="display: flex; align-items: center">
-                              <div class="project-icon-container primary">
-                                <i class="fa fa-map-marker"></i>
-                              </div>
-                              <div>
-                                <h5 class="project-title">Rwanda Locations Library</h5>
-                                <small class="project-description">TypeScript library for Rwanda's administrative data</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <span class="project-badge primary">Open Source</span>
-                          </td>
-                          <td>
-                            <span class="project-impact-value">14K+</span>
-                            <span class="project-impact-label">monthly downloads</span>
-                          </td>
-                          <td style="text-align: center">
-                            <a href="https://github.com/DevRW/rwanda-location" target="_blank" class="btn btn-sm btn-primary btn-primary-custom mr-2 mb-2">
-                              <i class="fa fa-github"></i> GitHub
-                            </a>
-                            <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" class="btn btn-sm btn-outline-custom mb-2">
-                              <i class="fa fa-cube"></i> npm
-                            </a>
-                          </td>
-                        </tr>
-
-                        <!-- Itegure Education Platform -->
-                        <tr class="project-row">
-                          <td>
-                            <div style="display: flex; align-items: center">
-                              <div class="project-icon-container warning">
-                                <i class="fa fa-graduation-cap"></i>
-                              </div>
-                              <div>
-                                <h5 class="project-title">Itegure Education Platform</h5>
-                                <small class="project-description">Web & USSD platform for Rwanda Education Board</small>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <span class="project-badge warning">Social Impact</span>
-                          </td>
-                          <td>
-                            <span class="project-impact-value">50K+</span>
-                            <span class="project-impact-label">parents reached</span>
-                          </td>
-                          <td style="text-align: center">
-                            <a href="http://itegure.rw/" target="_blank" class="btn btn-sm btn-primary btn-primary-custom">
-                              <i class="fa fa-external-link"></i> Visit Website
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- "Have a Project in Mind" CTA section -->
-          <div class="row mt-5">
-            <div class="col-12">
-              <div
-                class="card trade-app-content"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(16, 208, 120, 0.1) 0%,
-                    rgba(16, 208, 120, 0.05) 100%
-                  );
-                  border: 2px solid var(--primary);
-                "
-              >
-                <div class="card-body text-center py-5">
-                  <h3
-                    style="
-                      font-size: 2rem;
-                      font-weight: 700;
-                      margin-bottom: 1rem;
-                    "
-                  >
-                    Have a Project in Mind?
-                  </h3>
-                  <p
-                    style="
-                      font-size: 1.1rem;
-                      max-width: 700px;
-                      margin: 0 auto 2rem;
-                    "
-                  >
-                    Let's discuss how we can help you build innovative solutions
-                    that drive real business results. From concept to
-                    deployment, we're with you every step of the way.
-                  </p>
-                  <button
-                    class="btn btn-primary btn-lg mr-2 mb-2"
-                    data-toggle="modal"
-                    data-target="#hireProjectModal"
-                  >
-                    <i class="fa fa-rocket mr-2"></i>Start Your Project
-                  </button>
-                  <button
-                    class="btn btn-outline-primary btn-lg mb-2"
-                    style="border-color: var(--primary); color: var(--primary)"
-                    data-toggle="modal"
-                    data-target="#requestCVModal"
-                  >
-                    <i class="fa fa-users mr-2"></i>Request Developer CVs
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="stat" data-marker="02">
+          <span class="stat__num">14,837</span>
+          <span class="stat__lbl">rwandan villages mapped</span>
+          <div class="stat__note">in our open data library</div>
         </div>
-      </div>
-
-      <div class="portfolio section-padding" style="background-color: #2d3436">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>Your Gateway to Opportunities</h2>
-                <p>
-                  Whether you're a developer seeking your next role or a company
-                  building your dream team, DevRW is your platform
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-12 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-top: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <div class="mb-4 text-center">
-                    <i
-                      class="fa fa-code"
-                      style="font-size: 3.5rem; color: var(--primary)"
-                    ></i>
-                  </div>
-                  <h3 class="card-title text-center mb-3">For Developers</h3>
-                  <p class="text-center mb-4">
-                    Showcase your skills, connect with top companies, and land
-                    your next opportunity in Rwanda's growing tech ecosystem.
-                  </p>
-
-                  <div class="row text-center mb-4">
-                    <div class="col-6">
-                      <h4
-                        class="text-primary mb-1"
-                        style="font-size: 2rem; font-weight: 700"
-                      >
-                        500+
-                      </h4>
-                      <p
-                        style="
-                          font-size: 0.9rem;
-                          opacity: 0.8;
-                          margin-bottom: 0;
-                        "
-                      >
-                        Developers
-                      </p>
-                    </div>
-                    <div class="col-6">
-                      <h4
-                        class="text-primary mb-1"
-                        style="font-size: 2rem; font-weight: 700"
-                      >
-                        50+
-                      </h4>
-                      <p
-                        style="
-                          font-size: 0.9rem;
-                          opacity: 0.8;
-                          margin-bottom: 0;
-                        "
-                      >
-                        Companies Hiring
-                      </p>
-                    </div>
-                  </div>
-
-                  <ul class="mb-4" style="list-style: none; padding-left: 0">
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Get matched
-                      with hiring companies
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Access
-                      exclusive job opportunities
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Join
-                      Rwanda's developer community
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Free profile
-                      listing & visibility
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Networking &
-                      collaboration events
-                    </li>
-                  </ul>
-
-                  <div class="text-center">
-                    <button
-                      class="btn btn-primary btn-lg btn-block"
-                      data-toggle="modal"
-                      data-target="#developerModal"
-                    >
-                      <i class="fa fa-user-plus mr-2"></i>Join the Talent Pool
-                    </button>
-                    <a
-                      href="https://bit.ly/joinDevRWSlack"
-                      target="_blank"
-                      class="btn btn-outline-primary btn-lg btn-block mt-2"
-                      style="
-                        border-color: var(--primary);
-                        color: var(--primary);
-                      "
-                    >
-                      <i class="fa fa-slack mr-2"></i>Join Slack Community
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-xl-6 col-lg-6 col-md-12 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-top: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <div class="mb-4 text-center">
-                    <i
-                      class="fa fa-briefcase"
-                      style="font-size: 3.5rem; color: var(--primary)"
-                    ></i>
-                  </div>
-                  <h3 class="card-title text-center mb-3">
-                    For Businesses & Recruiters
-                  </h3>
-                  <p class="text-center mb-4">
-                    Access Rwanda's top developer talent or hire our team for
-                    your project. Fast, reliable, and cost-effective solutions.
-                  </p>
-
-                  <div class="row text-center mb-4">
-                    <div class="col-6">
-                      <h4
-                        class="text-primary mb-1"
-                        style="font-size: 2rem; font-weight: 700"
-                      >
-                        48hrs
-                      </h4>
-                      <p
-                        style="
-                          font-size: 0.9rem;
-                          opacity: 0.8;
-                          margin-bottom: 0;
-                        "
-                      >
-                        Response Time
-                      </p>
-                    </div>
-                    <div class="col-6">
-                      <h4
-                        class="text-primary mb-1"
-                        style="font-size: 2rem; font-weight: 700"
-                      >
-                        100%
-                      </h4>
-                      <p
-                        style="
-                          font-size: 0.9rem;
-                          opacity: 0.8;
-                          margin-bottom: 0;
-                        "
-                      >
-                        Vetted Talent
-                      </p>
-                    </div>
-                  </div>
-
-                  <ul class="mb-4" style="list-style: none; padding-left: 0">
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Pre-screened
-                      developer profiles
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Quick talent
-                      matching (48 hours)
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Flexible
-                      hiring options
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Full-time,
-                      contract, or project-based
-                    </li>
-                    <li class="mb-2">
-                      <i class="fa fa-check text-primary mr-2"></i> Transparent
-                      pricing, no hidden fees
-                    </li>
-                  </ul>
-
-                  <div class="text-center">
-                    <button
-                      class="btn btn-primary btn-lg btn-block mb-2"
-                      data-toggle="modal"
-                      data-target="#requestCVModal"
-                    >
-                      <i class="fa fa-users mr-2"></i>Request Developer CVs
-                    </button>
-                    <button
-                      class="btn btn-outline-primary btn-lg btn-block"
-                      style="
-                        border-color: var(--primary);
-                        color: var(--primary);
-                      "
-                      data-toggle="modal"
-                      data-target="#hireProjectModal"
-                    >
-                      <i class="fa fa-rocket mr-2"></i>Start a Project
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- What Makes DevRW Different -->
-      <div class="trade-app section-padding">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>What Makes DevRW Different</h2>
-                <p>
-                  Open source values, professional quality, community-driven
-                  impact
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-heart"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Open Source First</h4>
-                  <p>
-                    Everything we build, we share. From the Rwanda Locations
-                    library to our development tools, we believe in giving back
-                    to the community and making technology accessible to all.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-users"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Community Powered</h4>
-                  <p>
-                    Our strength comes from 500+ active developers who
-                    collaborate, learn, and grow together. Every project
-                    benefits from collective knowledge and peer review.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-code"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Quality & Best Practices</h4>
-                  <p>
-                    Modern tech stack (TypeScript, React, Node.js), 98%+ test
-                    coverage, comprehensive documentation. We build like we're
-                    open source—because we are.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-globe"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Africa-Focused Impact</h4>
-                  <p>
-                    We understand the local context and build solutions that
-                    work for African challenges. From USSD integration to
-                    Rwanda-specific data, we solve real problems.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-graduation-cap"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Learning & Growth</h4>
-                  <p>
-                    Through workshops, hackathons, and mentorship, we're
-                    building the next generation of African tech talent. Your
-                    project can be someone's learning opportunity.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div
-                class="card trade-app-content h-100"
-                style="border-left: 4px solid var(--primary)"
-              >
-                <div class="card-body">
-                  <i
-                    class="fa fa-handshake-o"
-                    style="font-size: 2.5rem; color: var(--primary)"
-                  ></i>
-                  <h4 class="mt-3 mb-3">Transparent & Fair</h4>
-                  <p>
-                    No hidden costs, no vendor lock-in. Fair compensation for
-                    developers, honest pricing for clients. We believe in
-                    building sustainable, ethical partnerships.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Community Voices Section -->
-      <div class="portfolio section-padding" style="background-color: #2d3436">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>Community Voices</h2>
-                <p>
-                  Hear from developers, partners, and organizations who are part
-                  of our community
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p
-                    style="
-                      font-style: italic;
-                      font-size: 1rem;
-                      line-height: 1.6;
-                    "
-                  >
-                    "DevRW gave me my first opportunity to work on a production
-                    project. The community is incredibly supportive, and I've
-                    learned more in 6 months here than I did in 2 years alone."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h5
-                      style="
-                        font-size: 1rem;
-                        font-weight: 700;
-                        margin-bottom: 0.25rem;
-                      "
-                    >
-                      Junior Developer
-                    </h5>
-                    <p
-                      style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0"
-                    >
-                      DevRW Community Member
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p
-                    style="
-                      font-style: italic;
-                      font-size: 1rem;
-                      line-height: 1.6;
-                    "
-                  >
-                    "The Rwanda Locations library saved us months of development
-                    time. It's amazing to have quality open source tools built
-                    specifically for African data. This is exactly what our
-                    ecosystem needs."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h5
-                      style="
-                        font-size: 1rem;
-                        font-weight: 700;
-                        margin-bottom: 0.25rem;
-                      "
-                    >
-                      Tech Lead
-                    </h5>
-                    <p
-                      style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0"
-                    >
-                      Fintech Startup, Kigali
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card trade-app-content h-100">
-                <div class="card-body">
-                  <div class="mb-3">
-                    <i
-                      class="fa fa-quote-left"
-                      style="
-                        font-size: 2rem;
-                        color: var(--primary);
-                        opacity: 0.3;
-                      "
-                    ></i>
-                  </div>
-                  <p
-                    style="
-                      font-style: italic;
-                      font-size: 1rem;
-                      line-height: 1.6;
-                    "
-                  >
-                    "DevRW delivered our education platform during COVID-19 with
-                    incredible speed and quality. Their commitment to social
-                    impact and community development makes them unique
-                    partners."
-                  </p>
-                  <div
-                    class="mt-4 pt-3"
-                    style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-                  >
-                    <h5
-                      style="
-                        font-size: 1rem;
-                        font-weight: 700;
-                        margin-bottom: 0.25rem;
-                      "
-                    >
-                      Education Official
-                    </h5>
-                    <p
-                      style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 0"
-                    >
-                      Rwanda Education Board
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mt-5">
-            <div class="col-12">
-              <div
-                style="
-                  background-color: rgba(16, 208, 120, 0.05);
-                  padding: 40px;
-                  border-radius: 12px;
-                  border: 2px solid var(--primary);
-                "
-              >
-                <div class="row align-items-center">
-                  <div class="col-lg-8 mb-3 mb-lg-0 text-center text-lg-left">
-                    <h3 style="font-size: 1.8rem; font-weight: 700">
-                      Join Our Community
-                    </h3>
-                    <p style="font-size: 1.1rem; margin-bottom: 0">
-                      Whether you're a developer looking to grow or a business
-                      seeking talented engineers, there's a place for you here.
-                    </p>
-                  </div>
-                  <div class="col-lg-4 text-lg-right text-center">
-                    <a
-                      href="https://bit.ly/joinDevRWSlack"
-                      target="_blank"
-                      class="btn btn-primary btn-lg btn-block mb-2"
-                    >
-                      <i class="fa fa-slack mr-2"></i>Join Slack
-                    </a>
-                    <button
-                      class="btn btn-outline-primary btn-lg btn-block"
-                      style="
-                        border-color: var(--primary);
-                        color: var(--primary);
-                      "
-                      data-toggle="modal"
-                      data-target="#developerModal"
-                    >
-                      <i class="fa fa-user-plus mr-2"></i>Add Your Profile
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="get-touch section-padding"
-        id="contact"
-        style="background-color: #2d3436"
-      >
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h2>Get in Touch</h2>
-                <p>
-                  Have questions about our projects or want to collaborate? We'd
-                  love to hear from you.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-4">
-            <div class="col-xl-4 col-lg-6 col-md-6 mb-3">
-              <div class="get-touch-content">
-                <div class="media">
-                  <span><i class="fa fa-envelope"></i></span>
-                  <div class="media-body">
-                    <h4>Email</h4>
-                    <p>
-                      <a
-                        href="mailto:hello@dev.rw"
-                        style="color: rgba(255, 255, 255, 0.65)"
-                        >hello@dev.rw</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 mb-3">
-              <div class="get-touch-content">
-                <div class="media">
-                  <span><i class="fa fa-phone"></i></span>
-                  <div class="media-body">
-                    <h4>Phone</h4>
-                    <p>
-                      <a
-                        href="tel:+250788662441"
-                        style="color: rgba(255, 255, 255, 0.65)"
-                        >(+250) 788 662 441</a
-                      >
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-6 col-md-6 mb-3">
-              <div class="get-touch-content">
-                <div class="media">
-                  <span><i class="fa fa-map-marker"></i></span>
-                  <div class="media-body">
-                    <h4>Location</h4>
-                    <p>Kigali, Rwanda</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center mt-4">
-            <div class="col-xl-8 text-center">
-              <div class="get-touch-content">
-                <h4 class="mb-3">Connect With Our Community</h4>
-                <a
-                  href="https://bit.ly/joinDevRWSlack"
-                  target="_blank"
-                  class="btn btn-primary mr-2 mb-2"
-                >
-                  <i class="fa fa-slack"></i> Join Slack
-                </a>
-                <a
-                  href="https://twitter.com/devsInRW"
-                  target="_blank"
-                  class="btn btn-outline-primary mr-2 mb-2"
-                  style="border-color: var(--primary); color: var(--primary)"
-                >
-                  <i class="fa fa-twitter"></i> Twitter
-                </a>
-                <a
-                  href="https://linkedin.com/company/dev-rw"
-                  target="_blank"
-                  class="btn btn-outline-primary mb-2"
-                  style="border-color: var(--primary); color: var(--primary)"
-                >
-                  <i class="fa fa-linkedin"></i> LinkedIn
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2025 <a href="index.html">DevRW</a> | All Rights
-                  Reserved
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="https://twitter.com/devsInRW" target="_blank"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/company/dev-rw"
-                      target="_blank"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DevRW" target="_blank"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="stat" data-marker="03">
+          <span class="stat__num">100<span class="unit">%</span></span>
+          <span class="stat__lbl">mit licensed</span>
+          <div class="stat__note">fork it, ship it</div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Developer Modal -->
-    <div
-      class="modal fade"
-      id="developerModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="developerModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title" id="developerModalLabel">
-              Submit Your Developer Profile
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+  <!-- ============ 01 / COMMUNITY ============ -->
+  <section class="section section--bg-2" id="community">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">01</span> <span class="slash">/</span> community</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">A place to <span class="italic">build</span> with other<br/>Rwandan developers.</h2>
+          <p class="body mt-24">
+            A shared WhatsApp community, informal meetups in Kigali, code review on real production work.
+            Whether you're starting out or have been shipping for years, there's a chair for you.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01.1</span>
+          <h3 class="card__title">Collaborate &amp; learn</h3>
+          <p class="card__body">Work on real open source projects with developers who'll review your pull requests and tell you when they smell off.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.2</span>
+          <h3 class="card__title">Events &amp; meetups</h3>
+          <p class="card__body">Informal hack nights, talks, and workshops — mostly in Kigali, sometimes online. Nothing fancy. Pizza optional.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.3</span>
+          <h3 class="card__title">Share knowledge</h3>
+          <p class="card__body">Ask the dumb question, share the elegant fix, write the post-mortem. Active WhatsApp groups for help, hiring, ideas, and AI.</p>
+        </article>
+      </div>
+
+      <div class="mt-40 flex flex-wrap gap-12">
+        <a class="btn btn--primary" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">
+          Join whatsapp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn--ghost" data-modal-open="developerModal">Add your developer profile</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 / OPEN SOURCE ============ -->
+  <section class="section section--bg" id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02</span> <span class="slash">/</span> open_source</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">What we've <span class="italic">shipped</span> so far.</h2>
+          <p class="body mt-24">
+            Two production projects, fully owned by the community. We list real impact only — no inflated metrics.
+          </p>
+        </div>
+      </div>
+
+      <table class="proj-table">
+        <thead>
+          <tr><th>project</th><th>type</th><th>detail</th><th>links</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <h4 class="proj-name"><span class="proj-marker"></span>Rwanda Locations Library</h4>
+              <p class="proj-desc">TypeScript library covering Rwanda's full administrative tree — provinces, districts, sectors, cells, villages.</p>
+            </td>
+            <td><span class="badge badge--mint">open source · mit</span></td>
+            <td>
+              <span class="impact">14,837</span>
+              <span class="impact-lbl">villages indexed</span>
+            </td>
+            <td>
+              <a class="btn btn--ghost btn--sm" href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">GitHub</a>
+              <a class="btn btn--ghost btn--sm" href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h4 class="proj-name"><span class="proj-marker is-warning"></span>Itegure</h4>
+              <p class="proj-desc">Web &amp; USSD platform built with the Rwanda Education Board to keep parents informed during COVID-19 school closures.</p>
+            </td>
+            <td><span class="badge badge--ember">partnership · reb</span></td>
+            <td>
+              <span class="impact">en · kin · fr</span>
+              <span class="impact-lbl">multi-language, ussd &amp; web</span>
+            </td>
+            <td>
+              <a class="btn btn--ghost btn--sm" href="http://itegure.rw/" target="_blank" rel="noopener">Visit site</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="mt-40 codeblock">
+        <span><span class="prompt">$</span>npm install @devrw/rwanda-location</span>
+        <button class="codeblock__copy" data-copy="npm install @devrw/rwanda-location">Copy</button>
+      </div>
+
+      <!-- Community member projects -->
+      <div class="mt-80">
+        <div class="sec-head" style="margin-bottom:24px;padding-bottom:20px;">
+          <span class="sec-head__index"><span class="n">02b</span> <span class="slash">/</span> community_members</span>
+          <div class="sec-head__intro">
+            <h3 class="display-m">Projects from <span class="italic">members.</span></h3>
+            <p class="body mt-12">Open source work shipped by individual community members. We list — we don't gate-keep.</p>
           </div>
-          <div class="modal-body">
-            <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              id="developerForm"
-            >
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="devName">Full Name *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="devName"
-                    name="name"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="devEmail">Email Address *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="devEmail"
-                    name="email"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="devPhone">Phone Number *</label>
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="devPhone"
-                    name="phone"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="devExperience">Experience Level *</label>
-                  <select
-                    class="form-control"
-                    id="devExperience"
-                    name="experience"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  >
-                    <option value="">Select...</option>
-                    <option value="junior">Junior (0-2 years)</option>
-                    <option value="mid">Mid-level (2-5 years)</option>
-                    <option value="senior">Senior (5+ years)</option>
-                    <option value="lead">Lead/Architect (7+ years)</option>
-                  </select>
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="devSkills">Primary Skills & Technologies *</label>
-                <textarea
-                  class="form-control"
-                  id="devSkills"
-                  name="skills"
-                  rows="2"
-                  placeholder="e.g., JavaScript, React, Node.js, Python, AWS..."
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                ></textarea>
-              </div>
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="devGithub">GitHub Profile</label>
-                  <input
-                    type="url"
-                    class="form-control"
-                    id="devGithub"
-                    name="github"
-                    placeholder="https://github.com/username"
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="devPortfolio">Portfolio/LinkedIn</label>
-                  <input
-                    type="url"
-                    class="form-control"
-                    id="devPortfolio"
-                    name="portfolio"
-                    placeholder="https://"
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="devBio">Short Bio / About You *</label>
-                <textarea
-                  class="form-control"
-                  id="devBio"
-                  name="bio"
-                  rows="3"
-                  placeholder="Tell us about your background, interests, and what you're looking for..."
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                ></textarea>
-              </div>
-              <div class="mb-3">
-                <label for="devCVLink">CV/Resume Link *</label>
-                <input
-                  type="url"
-                  class="form-control"
-                  id="devCVLink"
-                  name="cv_link"
-                  placeholder="Google Drive, Dropbox, or personal website link"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-                <small class="form-text" style="color: rgba(255, 255, 255, 0.5)"
-                  >Please upload your CV to Google Drive or Dropbox and share
-                  the link</small
-                >
-              </div>
-              <div class="mb-3 form-check">
-                <input
-                  type="checkbox"
-                  class="form-check-input"
-                  id="devConsent"
-                  name="consent"
-                  required
-                />
-                <label class="form-check-label" for="devConsent">
-                  I consent to DevRW sharing my profile with potential employers
-                  and partners
-                </label>
-              </div>
-              <input
-                type="hidden"
-                name="_subject"
-                value="New Developer Profile Submission"
-              />
-            </form>
+        </div>
+
+        <table class="proj-table">
+          <thead>
+            <tr><th>project</th><th>by</th><th>detail</th><th>links</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h4 class="proj-name"><span class="proj-marker"></span>text-db-query-ai</h4>
+                <p class="proj-desc">Secure LLM-powered converter that turns natural language into database queries. Multi-ORM support, SQL-injection prevention, access controls, row-level filtering.</p>
+              </td>
+              <td>
+                <span class="badge badge--sky">ai · llm</span>
+                <div class="mono mt-12" style="font-size:12px;color:var(--ink-3)">by <a href="https://github.com/jnkindi" target="_blank" rel="noopener" style="color:var(--ink-2)">@jnkindi</a></div>
+              </td>
+              <td>
+                <span class="impact">TypeScript</span>
+                <span class="impact-lbl">mit · npm published</span>
+              </td>
+              <td>
+                <a class="btn btn--ghost btn--sm" href="https://github.com/jnkindi/text-db-query-ai" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn--ghost btn--sm" href="https://www.npmjs.com/package/text-db-query-ai" target="_blank" rel="noopener">npm</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="mt-40 cta-block">
+          <div>
+            <h3>Got an open source project to share?</h3>
+            <p class="body">Submit it — if it's open source and relevant, we list it here. No curation gate.</p>
           </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="submit" form="developerForm" class="btn btn-primary">
-              Submit Profile
+          <div class="cta-block__actions">
+            <button class="btn btn--mint-outline" data-modal-open="submitProjectModal">Submit your project
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
             </button>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Request CV Modal -->
-    <div
-      class="modal fade"
-      id="requestCVModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="requestCVModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title" id="requestCVModalLabel">
-              Request Developer CVs
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
+      <div class="mt-24 note">
+        Heads up: about a thousand npm downloads of rwanda-location in the last twelve months. Modest, growing, mostly used by teams in Rwanda and the diaspora. Honest numbers beat inflated ones.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 / AI ============ -->
+  <section class="section section--bg-2" id="ai">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">03</span> <span class="slash">/</span> ai_work</span>
+        <div class="sec-head__intro">
+          <span class="ai-badge mb-24" style="margin-bottom:16px">ai · ml · kinyarwanda nlp</span>
+          <h2 class="display-l">Learning <span class="italic">AI</span>, building with it.</h2>
+          <p class="body mt-24">
+            AI is the area the community is most actively exploring right now. Not as hype — as a real engineering shift
+            that's already changing the kind of products our members build. We're studying it together, not pretending
+            we've already mastered it.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">03.1</span>
+          <span class="ai-badge">study circle · weekly</span>
+          <h3 class="card__title">AI study circle</h3>
+          <p class="card__body">A recurring informal session where members work through papers, evaluate models, share prompts, and walk each other through what they're building — hands-on demos, not slide decks.</p>
+          <ul class="card__list">
+            <li>Paper-of-the-week threads</li>
+            <li>Open evaluations of OSS models</li>
+            <li>Prompt &amp; agent design clinics</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="card__num">03.2</span>
+          <span class="ai-badge">african nlp</span>
+          <h3 class="card__title">Kinyarwanda &amp; African NLP</h3>
+          <p class="card__body">Most foundation models barely speak Kinyarwanda. Members are building and evaluating models for African languages, and publishing the datasets along the way.</p>
+          <ul class="card__list">
+            <li>Open benchmark datasets</li>
+            <li>Fine-tuning on local corpora</li>
+            <li>Kinyarwanda translation evals</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="card__num">03.3</span>
+          <span class="ai-badge">applied ai</span>
+          <h3 class="card__title">AI-augmented tooling</h3>
+          <p class="card__body">RAG over local datasets, USSD bots backed by LLMs, AI-assisted code review, classifiers for African product data — tools we use ourselves, then publish.</p>
+          <ul class="card__list">
+            <li>RAG &amp; retrieval systems</li>
+            <li>LLM-backed USSD bots</li>
+            <li>Open source when ready</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="mt-40 flex flex-wrap gap-12">
+        <a class="btn btn--primary" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">
+          Join #ai on whatsapp
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn--ghost" data-modal-open="submitProjectModal">Submit an AI project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 / HOW WE SUSTAIN ============ -->
+  <section class="section section--bg" id="sustain">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">04</span> <span class="slash">/</span> how_we_sustain</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Open source is the <span class="italic">passion.</span> Paid work pays for it.</h2>
+          <p class="body mt-24">
+            When teams hire DevRW for software work, that revenue funds the libraries we keep open,
+            the events we host, and the developers we onboard. There is no separate sponsor.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">04.1</span>
+          <h3 class="card__title">Custom development</h3>
+          <p class="card__body">Community developers build production applications with modern tooling. Every paid project funds the open source side and creates onboarding ground for newer engineers.</p>
+          <ul class="card__list">
+            <li>Web apps &amp; internal platforms</li>
+            <li>Mobile (iOS / Android / RN)</li>
+            <li>USSD &amp; SMS integrations</li>
+            <li>APIs and data infrastructure</li>
+            <li>AI integration &amp; RAG systems</li>
+          </ul>
+        </article>
+        <article class="card">
+          <span class="card__num">04.2</span>
+          <h3 class="card__title">Developer placements</h3>
+          <p class="card__body">We connect companies with community members for full-time, contract, and project-based work — at fair rates, both sides.</p>
+          <div class="mt-24">
+            <button class="btn btn--mint-outline btn--sm" data-modal-open="requestCVModal">Request CVs</button>
           </div>
-          <div class="modal-body">
-            <p class="mb-4" style="opacity: 0.8">
-              Looking to hire? Tell us what you need and we'll send you matching
-              developer profiles within 48 hours.
-            </p>
-            <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              id="requestCVForm"
-            >
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="contactName">Your Name *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="contactName"
-                    name="contact_name"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="contactEmail">Email Address *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="contactEmail"
-                    name="email"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="companyName">Company/Organization</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="companyName"
-                  name="company"
-                  placeholder="Optional"
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-              </div>
-              <div class="mb-3">
-                <label for="roleTitle">What role are you hiring for? *</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="roleTitle"
-                  name="role"
-                  placeholder="e.g., Full Stack Developer, Mobile Engineer, DevOps Specialist"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-              </div>
-              <div class="mb-3">
-                <label for="requiredSkills"
-                  >Tell us about the role & required skills *</label
-                >
-                <textarea
-                  class="form-control"
-                  id="requiredSkills"
-                  name="requirements"
-                  rows="5"
-                  placeholder="What skills are you looking for? What's the experience level needed? Full-time or contract? Any specific requirements?"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                ></textarea>
-              </div>
-              <input
-                type="hidden"
-                name="_subject"
-                value="CV Request from Company"
-              />
-            </form>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="submit" form="requestCVForm" class="btn btn-primary">
-              Get Developer Profiles
-            </button>
-          </div>
+        </article>
+        <article class="card">
+          <span class="card__num">04.3</span>
+          <h3 class="card__title">Open source maintenance</h3>
+          <p class="card__body">Revenue from professional work funds the upkeep of the Rwanda Locations Library and any future tools the community adopts.</p>
+        </article>
+      </div>
+
+      <div class="mt-40 flex flex-wrap gap-12">
+        <button class="btn btn--primary" data-modal-open="hireProjectModal">Start a project</button>
+        <button class="btn btn--ghost" data-modal-open="requestCVModal">Request developer CVs</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 05 / PRINCIPLES ============ -->
+  <section class="section section--bg-2">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">05</span> <span class="slash">/</span> principles</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">What we <span class="italic">try to be.</span></h2>
+          <p class="body mt-24">No polished mission statement. These are the working principles.</p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01</span>
+          <h3 class="card__title">Open source first</h3>
+          <p class="card__body">Everything we can publish, we publish. The Rwanda Locations Library exists because the data should be free.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">02</span>
+          <h3 class="card__title">Community powered</h3>
+          <p class="card__body">Decisions happen in WhatsApp messages, not in a board room. Anyone can propose a project; anyone can review it.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">03</span>
+          <h3 class="card__title">Locally rooted</h3>
+          <p class="card__body">USSD where SMS is what people use. Kinyarwanda where Kinyarwanda is the working language. AI fine-tuned for African languages, not just English.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">04</span>
+          <h3 class="card__title">Honest about scale</h3>
+          <p class="card__body">We're a small group with two real projects. No inflated download counts, no fake testimonials. Numbers on this site are the real numbers.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">05</span>
+          <h3 class="card__title">Pay fairly</h3>
+          <p class="card__body">Community work is voluntary; client work is not. When we place a developer, the developer gets paid first, then the community.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">06</span>
+          <h3 class="card__title">Boring + durable</h3>
+          <p class="card__body">TypeScript, tests, documentation. Pull requests get reviewed before they ship. Deliberate, durable, dull in the best way.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 / VOICES ============ -->
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">06</span> <span class="slash">/</span> voices</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">One <span class="italic">partnership</span> worth talking about.</h2>
+          <p class="body mt-24">
+            We work with a handful of organisations a year. Itegure — built with the Rwanda Education
+            Board during COVID-19 — is the project we're most proud of.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards cards--2">
+        <article class="testimonial">
+          <p class="testimonial__quote">DevRW shipped a multi-language USSD and web platform that reached parents across the country when schools were closed. The work was fast, considered, and locally aware.</p>
+          <div class="testimonial__attr"><strong>Rwanda Education Board</strong> · partner on Itegure (2020)</div>
+        </article>
+        <article class="testimonial">
+          <p class="testimonial__quote">Open source tools built for African data are still rare. Having the country's administrative tree as a typed, documented npm package saves us a real chunk of engineering time.</p>
+          <div class="testimonial__attr"><strong>Engineering team</strong> · user of @devrw/rwanda-location</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section section--tight section--bg-2">
+    <div class="wrap">
+      <div class="cta-block cta-block--mint">
+        <div>
+          <h3>Got a project, an idea, or a CV worth sharing?</h3>
+          <p class="body">We read everything. Real replies, usually within a working day.</p>
+        </div>
+        <div class="cta-block__actions">
+          <a class="btn btn--primary" href="contact.html">Start a conversation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Hire for Project Modal -->
-    <div
-      class="modal fade"
-      id="hireProjectModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="hireProjectModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title" id="hireProjectModalLabel">
-              Start Your Project
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="mb-4" style="opacity: 0.8">
-              Tell us about your project and we'll get back to you within 24
-              hours with next steps.
-            </p>
-            <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              id="hireProjectForm"
-            >
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label for="projContactName">Your Name *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="projContactName"
-                    name="contact_name"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label for="projEmail">Email Address *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="projEmail"
-                    name="email"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label for="projCompanyName">Company/Organization</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="projCompanyName"
-                  name="company"
-                  placeholder="Optional"
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-              </div>
-              <div class="mb-3">
-                <label for="projectType">What do you need? *</label>
-                <select
-                  class="form-control"
-                  id="projectType"
-                  name="project_type"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                >
-                  <option value="">Select...</option>
-                  <option value="custom-development">
-                    Custom Software Development
-                  </option>
-                  <option value="staff-augmentation">Staff Augmentation</option>
-                  <option value="data-api">Data Solutions & APIs</option>
-                  <option value="consultation">Technical Consultation</option>
-                  <option value="other">Other / Not Sure</option>
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="projectDescription"
-                  >Tell us about your project *</label
-                >
-                <textarea
-                  class="form-control"
-                  id="projectDescription"
-                  name="description"
-                  rows="5"
-                  placeholder="What are you trying to build? What problems are you solving? Any timeline or budget considerations?"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                ></textarea>
-              </div>
-              <input
-                type="hidden"
-                name="_subject"
-                value="New Project Inquiry"
-              />
-            </form>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              form="hireProjectForm"
-              class="btn btn-primary"
-            >
-              Submit Project Request
-            </button>
-          </div>
+  <!-- ============ FOOTER (uniform) ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span class="dot"></span>dev<span class="tld">.rw</span></div>
+          <p class="footer__tag">A community of Rwandan developers building open source tools for Africa. Based in Kigali, on the internet everywhere.</p>
+        </div>
+        <div class="footer__col">
+          <h6>Site</h6>
+          <a href="index.html">Home</a>
+          <a href="community.html">Community</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">About</a>
+          <a href="jobs.html">Jobs</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col">
+          <h6>Open source</h6>
+          <a href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
+          <a href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">rwanda-location</a>
+          <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm package</a>
+          <a href="http://itegure.rw/" target="_blank" rel="noopener">Itegure</a>
+        </div>
+        <div class="footer__col">
+          <h6>Connect</h6>
+          <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@dev.rw">hello@dev.rw</a>
         </div>
       </div>
+      <div class="footer__bottom">
+        <span>© 2025 DevRW · MIT licensed where it can be.</span>
+        <span>Kigali, RW · UTC+2</span>
+      </div>
     </div>
+  </footer>
 
-    <!-- Custom Hover Styles -->
-    <style>
-      /* Consistent Container Alignment */
-      .container {
-        max-width: 1200px;
-        padding-left: 15px;
-        padding-right: 15px;
-      }
+  <!-- ============ MODALS ============ -->
 
-      /* Consistent Section Padding */
-      .section-padding {
-        padding: 40px 0;
-      }
+  <div class="modal-overlay" id="developerModal" role="dialog" aria-labelledby="developerModalTitle">
+    <div class="modal modal--wide">
+      <div class="modal__head">
+        <h3 class="modal__title" id="developerModalTitle">Add your developer profile</h3>
+        <button class="modal__close" data-modal-close aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg>
+        </button>
+      </div>
+      <p class="modal__intro">We'll review your profile and share it with recruiters and partner companies looking for engineers in your stack.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSe0LymG8jKHbgDqLnW4m3MiSK0lPQuZufXfqiV2xXDoUFmPxg/viewform?embedded=true"
+                loading="lazy"
+                title="Developer profile form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 50px 0;
-        }
-      }
+  <div class="modal-overlay" id="requestCVModal" role="dialog" aria-labelledby="requestCVModalTitle">
+    <div class="modal modal--wide">
+      <div class="modal__head">
+        <h3 class="modal__title" id="requestCVModalTitle">Request developer CVs</h3>
+        <button class="modal__close" data-modal-close aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg>
+        </button>
+      </div>
+      <p class="modal__intro">Tell us about the role. We'll send matching profiles from the community within a couple of working days.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true"
+                loading="lazy"
+                title="Request developer CVs form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-      /* Section Title Consistency */
-      .section-title {
-        margin-bottom: 3rem;
-      }
+  <div class="modal-overlay" id="hireProjectModal" role="dialog" aria-labelledby="hireProjectModalTitle">
+    <div class="modal modal--wide">
+      <div class="modal__head">
+        <h3 class="modal__title" id="hireProjectModalTitle">Start your project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg>
+        </button>
+      </div>
+      <p class="modal__intro">A short note on what you'd like to build. We'll come back with next steps within a working day.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true"
+                loading="lazy"
+                title="Start a project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-      .section-title h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        line-height: 1.2;
-      }
+  <div class="modal-overlay" id="submitProjectModal" role="dialog" aria-labelledby="submitProjectModalTitle">
+    <div class="modal modal--wide">
+      <div class="modal__head">
+        <h3 class="modal__title" id="submitProjectModalTitle">Submit your open source project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg>
+        </button>
+      </div>
+      <p class="modal__intro">Share your project — library, tool, dataset, AI model. If it fits the community's focus we'll add it to the projects page.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame"
+                data-src="https://docs.google.com/forms/d/e/1FAIpQLScxgaZa7jaRb4QtfKVZnNo_J00A3W6Kfnax2rKXXqkA4cJo8w/viewform?embedded=true"
+                loading="lazy"
+                title="Submit open source project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-      .section-title p {
-        font-size: 1.1rem;
-        opacity: 0.9;
-        line-height: 1.6;
-      }
-
-      @media (max-width: 768px) {
-        .section-title h2 {
-          font-size: 2rem;
-        }
-        .section-title p {
-          font-size: 1rem;
-        }
-      }
-
-      /* Card Consistency */
-      .card.trade-app-content {
-        border-radius: 12px;
-        margin-bottom: 20px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      .card.trade-app-content .card-body {
-        padding: 2rem;
-      }
-
-      @media (max-width: 768px) {
-        .card.trade-app-content .card-body {
-          padding: 1.5rem;
-        }
-      }
-
-      /* Consistent spacing between sections */
-      .intro,
-      .portfolio,
-      .trade-app,
-      .get-touch {
-        position: relative;
-      }
-
-      /* Hero section alignment */
-      .intro {
-        padding: 100px 0 80px 0;
-      }
-
-      @media (max-width: 768px) {
-        .intro {
-          padding: 60px 0 50px 0;
-        }
-      }
-
-      /* Outline button hover effects */
-      .btn-outline-primary:hover {
-        background-color: var(--primary) !important;
-        color: #fff !important;
-        border-color: var(--primary) !important;
-      }
-
-      .btn-outline-primary:hover i {
-        color: #fff !important;
-      }
-
-      /* Regular primary button hover effects */
-      .btn-primary:hover {
-        background-color: #0eb968 !important;
-        border-color: #0eb968 !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(16, 208, 120, 0.3);
-        transition: all 0.3s ease;
-      }
-
-      /* Link hover effects */
-      a:not(.btn):hover {
-        color: var(--primary) !important;
-        text-decoration: none;
-        transition: color 0.3s ease;
-      }
-
-      /* Card hover effects */
-      .card.trade-app-content:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Navigation link hover */
-      .nav-link:hover {
-        color: var(--primary) !important;
-        transition: color 0.3s ease;
-      }
-
-      /* Social media icon hover */
-      .footer-social ul li a:hover {
-        background-color: var(--primary) !important;
-        transform: translateY(-3px);
-        transition: all 0.3s ease;
-      }
-
-      /* Get touch content hover */
-      .get-touch-content:hover {
-        transform: translateX(5px);
-        transition: transform 0.3s ease;
-      }
-
-      /* Modal close button hover */
-      .modal-header .close:hover {
-        color: #fff !important;
-        opacity: 1;
-      }
-
-      /* Form input focus */
-      .form-control:focus {
-        border-color: var(--primary) !important;
-        box-shadow: 0 0 0 0.2rem rgba(16, 208, 120, 0.25) !important;
-      }
-
-      /* Button transitions */
-      .btn {
-        transition: all 0.3s ease;
-      }
-
-      /* Button consistency */
-      .btn-lg {
-        padding: 12px 32px;
-        font-size: 1.1rem;
-        border-radius: 6px;
-      }
-
-      .btn-primary {
-        font-weight: 600;
-      }
-
-      /* Smooth scroll behavior */
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Improve readability */
-      body {
-        line-height: 1.6;
-      }
-
-      /* Consistent icon sizing */
-      .fa,
-      .la {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      /* Better spacing for lists */
-      ul {
-        padding-left: 0;
-      }
-
-      ul li {
-      }
-
-      /* Trusted by section consistency */
-      .portfolio.section-padding {
-        padding: 60px 0;
-      }
-
-      /* Footer alignment */
-      .footer {
-        padding: 40px 0;
-      }
-
-      /* Stats consistency */
-      .intro .row.mt-5 {
-        margin-top: 3rem !important;
-        padding-top: 3rem;
-      }
-
-      /* Dropdown menu styling */
-      .dropdown-menu {
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        border-radius: 8px;
-        margin-top: 8px;
-      }
-
-      .dropdown-item {
-        transition: all 0.3s ease;
-      }
-
-      .dropdown-item:hover {
-        background-color: rgba(16, 208, 120, 0.1) !important;
-        color: #fff !important;
-        transform: translateX(5px);
-      }
-
-      .dropdown-item:hover small {
-        opacity: 1 !important;
-      }
-
-      /* CTA dropdown button */
-      .dropdown-toggle::after {
-        margin-left: 8px;
-      }
-
-    </style>
-
-    <!-- Added scripts for the navBar toggler function-->
-
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
-
-    <script>
-      // Form submission handling
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get all forms
-        const developerForm = document.getElementById("developerForm");
-        const requestCVForm = document.getElementById("requestCVForm");
-        const hireProjectForm = document.getElementById("hireProjectForm");
-
-        // Handle developer form submission
-        if (developerForm) {
-          developerForm.addEventListener("submit", function (e) {
-            // Form will submit to Formspree
-            // Show success message after submission
-            setTimeout(function () {
-              alert(
-                "Thank you for submitting your profile! We will review it and get back to you soon."
-              );
-            }, 100);
-          });
-        }
-
-        // Handle CV request form submission
-        if (requestCVForm) {
-          requestCVForm.addEventListener("submit", function (e) {
-            setTimeout(function () {
-              alert(
-                "Thank you for your request! We will send you matching CVs within 24-48 hours."
-              );
-            }, 100);
-          });
-        }
-
-        // Handle project hire form submission
-        if (hireProjectForm) {
-          hireProjectForm.addEventListener("submit", function (e) {
-            setTimeout(function () {
-              alert(
-                "Thank you for your project inquiry! Our team will review it and contact you within 24 hours."
-              );
-            }, 100);
-          });
-        }
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            const target = this.getAttribute("href");
-            if (target !== "#" && document.querySelector(target)) {
-              e.preventDefault();
-              document.querySelector(target).scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-              });
-            }
-          });
-        });
-      });
-    </script>
-  </body>
+  <script src="js/app.js"></script>
+</body>
 </html>

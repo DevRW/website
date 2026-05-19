@@ -1,0 +1,27 @@
+# ── OS ──────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# ── Editors ─────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+
+# ── Claude Code ─────────────────────────────────
+.claude/
+.playwright-mcp/
+
+# ── Screenshot / test artifacts (root only) ─────
+/*.png
+/*.jpg
+/*.jpeg
+/*.gif
+
+# ── Markdown notes (README is excluded below) ────
+*.md
+!README.md

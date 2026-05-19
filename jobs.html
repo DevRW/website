@@ -1,851 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Jobs - DevRW | Developer Opportunities in Rwanda</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0A0E0C" />
+  <meta name="color-scheme" content="dark" />
+  <title>Jobs — DevRW</title>
+  <meta name="description" content="Developer opportunities through the DevRW community. Live openings tracked on a public Google Sheet — submit your CV to be considered." />
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
 
-    <link rel="icon" type="image/png" sizes="16x16" href="images/logo.png" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-    <div id="main-wrapper">
-      <!-- Header -->
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-12">
-              <div class="navigation">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                  <a class="navbar-brand" href="index.html">
-                    <h2 class="text-primary">DevRW</h2>
-                  </a>
-                  <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-toggle="collapse"
-                    data-target="#navbarNavDropdown"
-                  >
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="community.html">Community</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="jobs.html">Jobs</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="signin-btn">
-                    <a class="btn btn-primary" href="contact.html" style="font-weight: 600; padding: 10px 24px">
-                      <i class="fa fa-users mr-2"></i>Hire Developers
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="index.html" class="nav__brand"><span class="dot"></span>dev<span class="tld">.rw</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="community.html">Community</a>
+        <a class="nav__link" href="projects.html">Projects</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link is-active" href="jobs.html">Jobs</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta">
+        <button class="btn btn--primary btn--sm" data-modal-open="requestCVModal">
+          Hire developers
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <button class="nav__toggle" data-nav-toggle aria-expanded="false">Menu</button>
       </div>
+    </div>
+    <div class="nav__drawer" data-nav-drawer>
+      <a class="nav__link" href="index.html">Home</a>
+      <a class="nav__link" href="community.html">Community</a>
+      <a class="nav__link" href="projects.html">Projects</a>
+      <a class="nav__link" href="about.html">About</a>
+      <a class="nav__link is-active" href="jobs.html">Jobs</a>
+      <a class="nav__link" href="contact.html">Contact</a>
+    </div>
+  </header>
 
-      <!-- Jobs Listing Section -->
-      <div class="trade-app section-padding" style="padding-top: 120px">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-xl-10 col-lg-11">
-              <div class="section-title text-center">
-                <h1
-                  style="font-size: 3rem; font-weight: 700; margin-bottom: 1rem"
-                >
-                  Developer Opportunities
-                </h1>
-                <p style="font-size: 1.2rem">
-                  Find your next role with Rwanda's top companies and startups
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Filter Section -->
-          <div class="row justify-content-center mt-4 mb-4">
-            <div class="col-xl-11">
-              <div class="card trade-app-content">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-md-4 mb-3">
-                      <label style="font-weight: 600; margin-bottom: 0.5rem"
-                        >Job Type</label
-                      >
-                      <select
-                        class="form-control"
-                        style="
-                          background-color: #394247;
-                          border: 1px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                        "
-                      >
-                        <option>All Types</option>
-                        <option>Full-time</option>
-                        <option>Contract</option>
-                        <option>Remote</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label style="font-weight: 600; margin-bottom: 0.5rem"
-                        >Experience Level</label
-                      >
-                      <select
-                        class="form-control"
-                        style="
-                          background-color: #394247;
-                          border: 1px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                        "
-                      >
-                        <option>All Levels</option>
-                        <option>Junior</option>
-                        <option>Mid-level</option>
-                        <option>Senior</option>
-                      </select>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                      <label style="font-weight: 600; margin-bottom: 0.5rem"
-                        >Technology</label
-                      >
-                      <select
-                        class="form-control"
-                        style="
-                          background-color: #394247;
-                          border: 1px solid rgba(255, 255, 255, 0.2);
-                          color: rgba(255, 255, 255, 0.85);
-                        "
-                      >
-                        <option>All Technologies</option>
-                        <option>JavaScript/TypeScript</option>
-                        <option>Python</option>
-                        <option>Java</option>
-                        <option>Mobile Development</option>
-                      </select>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Jobs Listings -->
-          <div class="row justify-content-center">
-            <div class="col-xl-11">
-              <!-- Job 1: Senior Full Stack Developer -->
-              <div class="card trade-app-content mb-4">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-md-8">
-                      <div class="d-flex align-items-start mb-3">
-                        <div
-                          style="
-                            width: 60px;
-                            height: 60px;
-                            background-color: rgba(16, 208, 120, 0.1);
-                            border-radius: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-right: 15px;
-                          "
-                        >
-                          <i
-                            class="fa fa-building"
-                            style="font-size: 1.5rem; color: var(--primary)"
-                          ></i>
-                        </div>
-                        <div>
-                          <h4 style="font-weight: 700">
-                            Senior Full Stack Developer
-                          </h4>
-                          <p style="opacity: 0.9">
-                            <strong>TechCorp Rwanda</strong> • Kigali, Rwanda
-                          </p>
-                          <div>
-                            <span
-                              class="badge"
-                              style="
-                                background-color: var(--primary);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Full-time</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Senior</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                font-size: 0.8rem;
-                              "
-                              >On-site</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <p style="margin-bottom: 1rem">
-                        Build scalable web applications using React, Node.js,
-                        and PostgreSQL. Lead technical decisions and mentor
-                        junior developers in a fast-growing fintech startup.
-                      </p>
-                      <div style="opacity: 0.8">
-                        <strong>Skills:</strong> React, Node.js, TypeScript,
-                        PostgreSQL, AWS
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-4 text-md-right text-center mt-3 mt-md-0"
-                    >
-                      <div style="margin-bottom: 1rem">
-                        <div
-                          style="
-                            font-size: 1.5rem;
-                            font-weight: 700;
-                            color: var(--primary);
-                          "
-                        >
-                          $30K - $45K
-                        </div>
-                        <small style="opacity: 0.7">per year</small>
-                      </div>
-                      <button
-                        class="btn btn-primary btn-block"
-                        onclick="openApplyModal('Senior Full Stack Developer', 'TechCorp Rwanda')"
-                      >
-                        <i class="fa fa-paper-plane mr-2"></i>Apply Now
-                      </button>
-                      <small
-                        style="opacity: 0.7; display: block; margin-top: 0.5rem"
-                        >Posted 2 days ago</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Job 2: Frontend Developer -->
-              <div class="card trade-app-content mb-4">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-md-8">
-                      <div class="d-flex align-items-start mb-3">
-                        <div
-                          style="
-                            width: 60px;
-                            height: 60px;
-                            background-color: rgba(16, 208, 120, 0.1);
-                            border-radius: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-right: 15px;
-                          "
-                        >
-                          <i
-                            class="fa fa-laptop"
-                            style="font-size: 1.5rem; color: var(--primary)"
-                          ></i>
-                        </div>
-                        <div>
-                          <h4 style="font-weight: 700">
-                            Frontend Developer (React)
-                          </h4>
-                          <p style="opacity: 0.9">
-                            <strong>Digital Solutions Ltd</strong> • Remote
-                          </p>
-                          <div>
-                            <span
-                              class="badge"
-                              style="
-                                background-color: var(--primary);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Contract</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Mid-level</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                font-size: 0.8rem;
-                              "
-                              >Remote</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <p style="margin-bottom: 1rem">
-                        Join our team to build modern, responsive web
-                        applications for international clients. Work with
-                        cutting-edge technologies and collaborate with a
-                        distributed team.
-                      </p>
-                      <div style="opacity: 0.8">
-                        <strong>Skills:</strong> React, JavaScript, CSS, REST
-                        APIs, Git
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-4 text-md-right text-center mt-3 mt-md-0"
-                    >
-                      <div style="margin-bottom: 1rem">
-                        <div
-                          style="
-                            font-size: 1.5rem;
-                            font-weight: 700;
-                            color: var(--primary);
-                          "
-                        >
-                          $2K - $3K
-                        </div>
-                        <small style="opacity: 0.7">per month</small>
-                      </div>
-                      <button
-                        class="btn btn-primary btn-block"
-                        onclick="openApplyModal('Frontend Developer (React)', 'Digital Solutions Ltd')"
-                      >
-                        <i class="fa fa-paper-plane mr-2"></i>Apply Now
-                      </button>
-                      <small
-                        style="opacity: 0.7; display: block; margin-top: 0.5rem"
-                        >Posted 5 days ago</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Job 3: Mobile Developer -->
-              <div class="card trade-app-content mb-4">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-md-8">
-                      <div class="d-flex align-items-start mb-3">
-                        <div
-                          style="
-                            width: 60px;
-                            height: 60px;
-                            background-color: rgba(16, 208, 120, 0.1);
-                            border-radius: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-right: 15px;
-                          "
-                        >
-                          <i
-                            class="fa fa-mobile"
-                            style="font-size: 1.8rem; color: var(--primary)"
-                          ></i>
-                        </div>
-                        <div>
-                          <h4 style="font-weight: 700">
-                            Mobile Developer (React Native)
-                          </h4>
-                          <p style="opacity: 0.9">
-                            <strong>StartupHub Rwanda</strong> • Kigali, Rwanda
-                          </p>
-                          <div>
-                            <span
-                              class="badge"
-                              style="
-                                background-color: var(--primary);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Full-time</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Mid-level</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                font-size: 0.8rem;
-                              "
-                              >Hybrid</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <p style="margin-bottom: 1rem">
-                        Develop cross-platform mobile applications for
-                        e-commerce and fintech clients. Work on innovative
-                        features and contribute to app architecture decisions.
-                      </p>
-                      <div style="opacity: 0.8">
-                        <strong>Skills:</strong> React Native,
-                        JavaScript/TypeScript, Mobile APIs, Firebase
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-4 text-md-right text-center mt-3 mt-md-0"
-                    >
-                      <div style="margin-bottom: 1rem">
-                        <div
-                          style="
-                            font-size: 1.5rem;
-                            font-weight: 700;
-                            color: var(--primary);
-                          "
-                        >
-                          $24K - $36K
-                        </div>
-                        <small style="opacity: 0.7">per year</small>
-                      </div>
-                      <button
-                        class="btn btn-primary btn-block"
-                        onclick="openApplyModal('Mobile Developer (React Native)', 'StartupHub Rwanda')"
-                      >
-                        <i class="fa fa-paper-plane mr-2"></i>Apply Now
-                      </button>
-                      <small
-                        style="opacity: 0.7; display: block; margin-top: 0.5rem"
-                        >Posted 1 week ago</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Job 4: DevOps Engineer -->
-              <div class="card trade-app-content mb-4">
-                <div class="card-body">
-                  <div class="row align-items-center">
-                    <div class="col-md-8">
-                      <div class="d-flex align-items-start mb-3">
-                        <div
-                          style="
-                            width: 60px;
-                            height: 60px;
-                            background-color: rgba(16, 208, 120, 0.1);
-                            border-radius: 8px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            margin-right: 15px;
-                          "
-                        >
-                          <i
-                            class="fa fa-server"
-                            style="font-size: 1.5rem; color: var(--primary)"
-                          ></i>
-                        </div>
-                        <div>
-                          <h4 style="font-weight: 700">DevOps Engineer</h4>
-                          <p style="opacity: 0.9">
-                            <strong>CloudTech Africa</strong> • Remote (Africa
-                            timezone)
-                          </p>
-                          <div>
-                            <span
-                              class="badge"
-                              style="
-                                background-color: var(--primary);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Full-time</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                margin-right: 6px;
-                                font-size: 0.8rem;
-                              "
-                              >Senior</span
-                            >
-                            <span
-                              class="badge"
-                              style="
-                                background-color: rgba(255, 255, 255, 0.1);
-                                color: #fff;
-                                padding: 4px 10px;
-                                font-size: 0.8rem;
-                              "
-                              >Remote</span
-                            >
-                          </div>
-                        </div>
-                      </div>
-                      <p style="margin-bottom: 1rem">
-                        Manage cloud infrastructure, implement CI/CD pipelines,
-                        and ensure system reliability. Work with AWS, Docker,
-                        and Kubernetes in a fast-paced environment.
-                      </p>
-                      <div style="opacity: 0.8">
-                        <strong>Skills:</strong> AWS, Docker, Kubernetes,
-                        Terraform, CI/CD, Linux
-                      </div>
-                    </div>
-                    <div
-                      class="col-md-4 text-md-right text-center mt-3 mt-md-0"
-                    >
-                      <div style="margin-bottom: 1rem">
-                        <div
-                          style="
-                            font-size: 1.5rem;
-                            font-weight: 700;
-                            color: var(--primary);
-                          "
-                        >
-                          $35K - $50K
-                        </div>
-                        <small style="opacity: 0.7">per year</small>
-                      </div>
-                      <button
-                        class="btn btn-primary btn-block"
-                        onclick="openApplyModal('DevOps Engineer', 'CloudTech Africa')"
-                      >
-                        <i class="fa fa-paper-plane mr-2"></i>Apply Now
-                      </button>
-                      <small
-                        style="opacity: 0.7; display: block; margin-top: 0.5rem"
-                        >Posted 3 days ago</small
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- CTA for Companies -->
-              <div
-                class="card trade-app-content"
-                style="
-                  background: linear-gradient(
-                    135deg,
-                    rgba(16, 208, 120, 0.1) 0%,
-                    rgba(16, 208, 120, 0.05) 100%
-                  );
-                  border: 2px solid var(--primary);
-                "
-              >
-                <div class="card-body text-center py-5">
-                  <h3
-                    style="
-                      font-size: 1.8rem;
-                      font-weight: 700;
-                      margin-bottom: 1rem;
-                    "
-                  >
-                    Looking to Hire Developers?
-                  </h3>
-                  <p style="font-size: 1.1rem; margin-bottom: 2rem">
-                    Post your job opportunities and connect with Rwanda's top
-                    developer talent.
-                  </p>
-                  <a href="contact.html" class="btn btn-primary btn-lg">
-                    <i class="fa fa-briefcase mr-2"></i>Post a Job
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Footer -->
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="copyright">
-                <p>
-                  © Copyright 2025 <a href="index.html">DevRW</a> | All Rights
-                  Reserved
-                </p>
-              </div>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-              <div class="footer-social">
-                <ul>
-                  <li>
-                    <a href="https://twitter.com/devsInRW" target="_blank"
-                      ><i class="fa fa-twitter"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://linkedin.com/company/dev-rw"
-                      target="_blank"
-                      ><i class="fa fa-linkedin"></i
-                    ></a>
-                  </li>
-                  <li>
-                    <a href="https://github.com/DevRW" target="_blank"
-                      ><i class="fa fa-github"></i
-                    ></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+  <section class="page-head">
+    <div class="wrap">
+      <div class="rise">
+        <span class="eyebrow page-head__index">jobs / opportunities</span>
+        <h1 class="display-xl">Live openings <span class="italic">live elsewhere.</span></h1>
+        <p class="lead">
+          We don't run a job board on this site. Active openings are tracked in a public Google Sheet
+          that the community keeps up to date. Below: how the routing works, and how to get into the pool.
+        </p>
+        <div class="flex flex-wrap gap-12 mt-40">
+          <a class="btn btn--primary btn--lg" href="https://docs.google.com/spreadsheets/d/1znh84cfdT88ITB74C9DbuCdLhOMFGJn7TLOJwYZhqYQ/edit?usp=sharing" target="_blank" rel="noopener">
+            View live openings (Google Sheet)
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <button class="btn btn--ghost btn--lg" data-modal-open="developerModal">Submit your CV</button>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Job Application Modal -->
-    <div class="modal fade" id="applyModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-lg" role="document">
-        <div
-          class="modal-content"
-          style="background-color: #2d3436; color: rgba(255, 255, 255, 0.85)"
-        >
-          <div
-            class="modal-header"
-            style="border-bottom: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <h5 class="modal-title">
-              <i class="fa fa-paper-plane text-primary mr-2"></i>
-              Apply for <span id="jobTitle"></span>
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              style="color: rgba(255, 255, 255, 0.85)"
-            >
-              <span>&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="mb-4" style="opacity: 0.9">
-              Applying to: <strong id="companyName"></strong>
-            </p>
-            <form
-              action="https://formspree.io/f/YOUR_FORM_ID"
-              method="POST"
-              id="applyForm"
-            >
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <label>Full Name *</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="name"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <label>Email Address *</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    name="email"
-                    required
-                    style="
-                      background-color: #394247;
-                      border: 1px solid rgba(255, 255, 255, 0.2);
-                      color: rgba(255, 255, 255, 0.85);
-                    "
-                  />
-                </div>
-              </div>
-              <div class="mb-3">
-                <label>Phone Number *</label>
-                <input
-                  type="tel"
-                  class="form-control"
-                  name="phone"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-              </div>
-              <div class="mb-3">
-                <label>LinkedIn or Portfolio URL *</label>
-                <input
-                  type="url"
-                  class="form-control"
-                  name="portfolio"
-                  placeholder="https://"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                />
-              </div>
-              <div class="mb-3">
-                <label>Cover Letter / Why are you interested? *</label>
-                <textarea
-                  class="form-control"
-                  name="cover_letter"
-                  rows="5"
-                  required
-                  style="
-                    background-color: #394247;
-                    border: 1px solid rgba(255, 255, 255, 0.2);
-                    color: rgba(255, 255, 255, 0.85);
-                  "
-                  placeholder="Tell us why you're a great fit for this role..."
-                ></textarea>
-              </div>
-              <input type="hidden" name="job_title" id="jobTitleInput" />
-              <input type="hidden" name="company" id="companyInput" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="New Job Application"
-              />
-            </form>
-          </div>
-          <div
-            class="modal-footer"
-            style="border-top: 1px solid rgba(255, 255, 255, 0.1)"
-          >
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Cancel
-            </button>
-            <button type="submit" form="applyForm" class="btn btn-primary">
-              <i class="fa fa-paper-plane mr-2"></i>Submit Application
-            </button>
-          </div>
+  <section class="section section--bg-2">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">01</span> <span class="slash">/</span> how_it_works</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">No board on this site. <span class="italic">A pipeline.</span></h2>
+          <p class="body mt-24">
+            Companies send us role briefs. We circulate them in WhatsApp, match candidates, and forward shortlists.
+            The current openings live on a public Google Sheet — easier to keep accurate than a hand-coded page.
+          </p>
+        </div>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="card__num">01.1</span>
+          <h3 class="card__title">You submit a CV</h3>
+          <p class="card__body">A real CV, a working portfolio link, and a couple of lines on what you're after. We confirm receipt and add you to the directory.</p>
+          <div class="mt-24"><button class="btn btn--mint-outline btn--sm" data-modal-open="developerModal">Submit yours</button></div>
+        </article>
+        <article class="card">
+          <span class="card__num">01.2</span>
+          <h3 class="card__title">A role comes in</h3>
+          <p class="card__body">A hiring partner sends us a brief. We add it to the public Google Sheet, circulate it in #jobs on WhatsApp, and reach out directly to people who match.</p>
+        </article>
+        <article class="card">
+          <span class="card__num">01.3</span>
+          <h3 class="card__title">You decide</h3>
+          <p class="card__body">If interested, we forward your CV. Interview, negotiate, sign — all between you and the company. We don't take a cut from your salary.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">02</span> <span class="slash">/</span> openings_sheet</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">Where the actual <span class="italic">listings live.</span></h2>
+          <p class="body mt-24">
+            We use a single Google Sheet as the source of truth for active openings. It's public and
+            view-only. Filter, sort, copy a row — whatever's useful. We update it whenever a new role
+            comes in or an old one closes.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-block cta-block--mint">
+        <div>
+          <h3>Open the live openings sheet</h3>
+          <p class="body">Hosted on Google Sheets. View-only. Updated as roles come in.</p>
+        </div>
+        <div class="cta-block__actions">
+          <a class="btn btn--primary btn--lg" href="https://docs.google.com/spreadsheets/d/1znh84cfdT88ITB74C9DbuCdLhOMFGJn7TLOJwYZhqYQ/edit?usp=sharing" target="_blank" rel="noopener">
+            Open Google Sheet
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-40 note">
+        Honesty note: an earlier version of this page listed four roles with specific companies (TechCorp Rwanda, Digital Solutions Ltd, StartupHub Rwanda, CloudTech Africa). Those weren't real openings — they were placeholder examples and we removed them. Real openings now live on the public Google Sheet linked above.
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg-2">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-head__index"><span class="n">03</span> <span class="slash">/</span> role_types</span>
+        <div class="sec-head__intro">
+          <h2 class="display-l">What we typically <span class="italic">route.</span></h2>
+          <p class="body mt-24">
+            These are the role categories we see most often. Salary depends on the hiring company; we
+            don't publish bands here because they tend to be wrong by the time anyone reads them.
+          </p>
+        </div>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">Senior full-stack developer</h3>
+          <p class="job__company">often: <span>fintech, e-commerce, SaaS startups</span> · kigali or remote</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">typescript</span><span class="tag">react</span><span class="tag">node.js</span><span class="tag">postgres</span><span class="tag">aws</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">Frontend developer (React)</h3>
+          <p class="job__company">often: <span>contract / part-time work</span> · remote-friendly</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">react</span><span class="tag">javascript</span><span class="tag">css</span><span class="tag">rest</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">Mobile developer (RN / Flutter)</h3>
+          <p class="job__company">often: <span>African product startups</span> · kigali hybrid or remote</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">react native</span><span class="tag">flutter</span><span class="tag">firebase</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">DevOps / infrastructure engineer</h3>
+          <p class="job__company">often: <span>scale-ups with growing teams</span> · remote across africa</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">aws / gcp</span><span class="tag">docker</span><span class="tag">kubernetes</span><span class="tag">terraform</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">AI / ML engineer</h3>
+          <p class="job__company">often: <span>AI-native startups, gov / NGO ML projects</span> · remote-friendly</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">python</span><span class="tag">llms · rag</span><span class="tag">hf transformers</span><span class="tag">eval / fine-tuning</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+
+      <div class="job">
+        <div>
+          <h3 class="job__title">Backend / API engineer</h3>
+          <p class="job__company">often: <span>data-heavy products, govtech</span> · remote-friendly</p>
+        </div>
+        <div class="job__meta">
+          <span class="tag">node / go / python</span><span class="tag">postgres</span><span class="tag">rest &amp; graphql</span>
+        </div>
+        <button class="btn btn--ghost btn--sm" data-modal-open="developerModal">Be considered</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--bg">
+    <div class="wrap">
+      <div class="cta-block">
+        <div>
+          <h3>Looking to hire from the community?</h3>
+          <p class="body">Send us a role brief and we'll add it to the public Google Sheet and route it through WhatsApp. No exclusivity, no platform fees.</p>
+        </div>
+        <div class="cta-block__actions">
+          <button class="btn btn--primary" data-modal-open="requestCVModal">Submit a role brief
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+          <a class="btn btn--ghost" href="contact.html">Talk to us</a>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand"><span class="dot"></span>dev<span class="tld">.rw</span></div>
+          <p class="footer__tag">A community of Rwandan developers building open source tools for Africa. Based in Kigali, on the internet everywhere.</p>
+        </div>
+        <div class="footer__col"><h6>Site</h6>
+          <a href="index.html">Home</a><a href="community.html">Community</a><a href="projects.html">Projects</a>
+          <a href="about.html">About</a><a href="jobs.html">Jobs</a><a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__col"><h6>Open source</h6>
+          <a href="https://github.com/DevRW" target="_blank" rel="noopener">GitHub org</a>
+          <a href="https://github.com/DevRW/rwanda-location" target="_blank" rel="noopener">rwanda-location</a>
+          <a href="https://www.npmjs.com/package/@devrw/rwanda-location" target="_blank" rel="noopener">npm package</a>
+          <a href="http://itegure.rw/" target="_blank" rel="noopener">Itegure</a>
+        </div>
+        <div class="footer__col"><h6>Connect</h6>
+          <a href="https://chat.whatsapp.com/GJoStt3riS3LoH4fMsYKgx" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://twitter.com/devsInRW" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://linkedin.com/company/dev-rw" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:hello@dev.rw">hello@dev.rw</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 DevRW · MIT licensed where it can be.</span>
+        <span>Kigali, RW · UTC+2</span>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-      function openApplyModal(jobTitle, company) {
-        document.getElementById("jobTitle").textContent = jobTitle;
-        document.getElementById("companyName").textContent = company;
-        document.getElementById("jobTitleInput").value = jobTitle;
-        document.getElementById("companyInput").value = company;
-        $("#applyModal").modal("show");
-      }
+  <div class="modal-overlay" id="developerModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Add your developer profile</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">We'll review your profile and share it with recruiters and partner companies looking for engineers in your stack.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSe0LymG8jKHbgDqLnW4m3MiSK0lPQuZufXfqiV2xXDoUFmPxg/viewform?embedded=true" loading="lazy" title="Developer profile form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-      // Form submission handling
-      document
-        .getElementById("applyForm")
-        .addEventListener("submit", function (e) {
-          setTimeout(function () {
-            alert(
-              "Thank you for your application! We will review it and get back to you soon."
-            );
-            $("#applyModal").modal("hide");
-          }, 100);
-        });
-    </script>
+  <div class="modal-overlay" id="requestCVModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Request developer CVs</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Tell us about the role. We'll send matching profiles within a couple of working days.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdEf4OOU0VOoF6FisQEi0T2ObteHG8_snebPa9UbfoCCKoyrA/viewform?embedded=true" loading="lazy" title="Request developer CVs form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
 
-    <style>
-      .container {
-        max-width: 1200px;
-      }
-      .section-padding {
-        padding: 80px 0;
-      }
-      @media (max-width: 768px) {
-        .section-padding {
-          padding: 50px 0;
-        }
-      }
-      .btn-outline-primary:hover {
-        background-color: var(--primary) !important;
-        color: #fff !important;
-        border-color: var(--primary) !important;
-      }
-      .btn-primary:hover {
-        background-color: #0eb968 !important;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(16, 208, 120, 0.3);
-      }
-      .card.trade-app-content {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-      .card.trade-app-content:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      }
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  </body>
+  <div class="modal-overlay" id="hireProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Start your project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">A short note on what you'd like to build. We'll come back with next steps within a working day.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdCod8kHjNHzRF1lpxDQbyI0mwlW9Asa9B03yl_jrZvwfvj2w/viewform?embedded=true" loading="lazy" title="Start a project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="submitProjectModal" role="dialog">
+    <div class="modal modal--wide">
+      <div class="modal__head"><h3 class="modal__title">Submit your open source project</h3>
+        <button class="modal__close" data-modal-close aria-label="Close"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l12 12M13 1L1 13"/></svg></button>
+      </div>
+      <p class="modal__intro">Share your project — library, tool, dataset, AI model. If it fits, we'll add it to the projects page.</p>
+      <div class="modal__body">
+        <iframe class="modal__form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScxgaZa7jaRb4QtfKVZnNo_J00A3W6Kfnax2rKXXqkA4cJo8w/viewform?embedded=true" loading="lazy" title="Submit open source project form">Loading…</iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
 </html>
