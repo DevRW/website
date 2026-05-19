@@ -6,26 +6,46 @@
   <meta name="theme-color" content="#0A0E0C" />
   <meta name="color-scheme" content="dark" />
 
-  <title>DevRW — Open source, built in Kigali.</title>
-  <meta name="description" content="DevRW is a community of Rwandan developers building open source tools for Africa. We maintain the Rwanda Locations library, study AI together, and partner with organisations on practical software." />
+  <!-- Google Analytics 4 — replace GA_MEASUREMENT_ID with your G-XXXXXXXXXX ID from analytics.google.com -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Font preconnects — reduces first-paint latency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <title>DevRW — Open source developer community in Kigali, Rwanda</title>
+  <meta name="description" content="DevRW is a community of Rwandan developers building open source tools for Africa. We maintain the Rwanda Locations Library, run an AI study circle, and create paid opportunities for engineers in Kigali." />
+  <meta name="keywords" content="Rwanda developers, open source Rwanda, developer community Kigali, DevRW, software engineers Rwanda, open source Africa, AI community Kigali, Rwanda Locations Library, npm rwanda" />
   <meta name="author" content="DevRW" />
   <meta name="robots" content="index, follow" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://dev.rw/" />
-  <meta property="og:title" content="DevRW — Open source, built in Kigali." />
-  <meta property="og:description" content="A community of Rwandan developers building open source tools — and studying AI — in Kigali." />
-  <meta property="og:image" content="https://dev.rw/images/logo.png" />
   <meta property="og:site_name" content="DevRW" />
+  <meta property="og:title" content="DevRW — Open source developer community in Kigali, Rwanda" />
+  <meta property="og:description" content="A community of Rwandan developers building open source tools for Africa — Rwanda Locations Library, AI study circle, and developer placements in Kigali." />
+  <meta property="og:image" content="https://dev.rw/images/logo.png" />
+  <meta property="og:image:alt" content="DevRW logo" />
+  <meta property="og:locale" content="en_RW" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@devsInRW" />
   <meta name="twitter:creator" content="@devsInRW" />
+  <meta name="twitter:title" content="DevRW — Open source developer community in Kigali" />
+  <meta name="twitter:description" content="A community of Rwandan developers building open source tools for Africa — Rwanda Locations Library, AI study circle, and developer placements." />
+  <meta name="twitter:image" content="https://dev.rw/images/logo.png" />
 
   <link rel="canonical" href="https://dev.rw/" />
   <link rel="icon" type="image/png" href="images/logo.png" />
   <link rel="apple-touch-icon" href="images/logo.png" />
 
+  <!-- Organization schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,6 +68,18 @@
       "email": "hello@dev.rw",
       "availableLanguage": ["English", "Kinyarwanda", "French"]
     }
+  }
+  </script>
+
+  <!-- WebSite schema — enables Google sitelinks search box -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DevRW",
+    "url": "https://dev.rw",
+    "description": "Rwanda's open source developer community, built in Kigali.",
+    "inLanguage": ["en", "rw", "fr"]
   }
   </script>
 
